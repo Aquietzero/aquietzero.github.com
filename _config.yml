@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://Aquietzero.github.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Null Space
+subtitle: Null Space is NOT Null
+author: zero
 simple_search: http://google.com/search
-description:
+description: 
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -17,9 +17,9 @@ date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
-subscribe_email:
+subscribe_email: 
 # RSS feeds can list your email address if you like
-email:
+email: zhaoyunhaosss@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
