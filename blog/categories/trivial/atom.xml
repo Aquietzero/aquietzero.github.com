@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Trivial | Null Space]]></title>
+  <link href="http://Aquietzero.github.com/blog/categories/trivial/atom.xml" rel="self"/>
+  <link href="http://Aquietzero.github.com/"/>
+  <updated>2012-08-03T23:38:44+08:00</updated>
+  <id>http://Aquietzero.github.com/</id>
+  <author>
+    <name><![CDATA[zero]]></name>
+    <email><![CDATA[zhaoyunhaosss@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Another Fresh Start]]></title>
+    <link href="http://Aquietzero.github.com/blog/2012/08/03/another-fresh-start/"/>
+    <updated>2012-08-03T23:18:00+08:00</updated>
+    <id>http://Aquietzero.github.com/blog/2012/08/03/another-fresh-start</id>
+    <content type="html"><![CDATA[<p>最近几天空间和域名都过期了，实在不想再续费那些php空间了，也不想再去折腾博客系统，于是就偷懒用Octopress了。其实我也不是对博客系统没有兴趣了，只是需要一个写文章的地方，于是就选择了这里。之前很早就听说过Octopress了，也看到非常非常多的人在用，但一直有自己的空间使得我不想去用，但实际上我也好久没有更新过空间了，现在空间没有了，心里不实在了，想快点找个能写东西的地方...</p>
+
+<p>我不打算把之前的文章搬到这里来了，这里就当作是我一个新的开始吧...</p>
+]]></content>
+  </entry>
+  
+</feed>
