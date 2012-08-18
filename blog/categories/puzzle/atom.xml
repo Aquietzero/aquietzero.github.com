@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Null Space]]></title>
-  <link href="http://Aquietzero.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Puzzle | Null Space]]></title>
+  <link href="http://Aquietzero.github.com/blog/categories/puzzle/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
   <updated>2012-08-18T11:32:35+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
@@ -18,7 +18,7 @@
     <link href="http://Aquietzero.github.com/blog/2012/08/18/an-egg-measuring-puzzle/"/>
     <updated>2012-08-18T10:18:00+08:00</updated>
     <id>http://Aquietzero.github.com/blog/2012/08/18/an-egg-measuring-puzzle</id>
-    <content type="html"><![CDATA[<p>前两天做培训的时候，同事问了我一道称蛋的题目，乍一听，跟我们平常所接触的称蛋问题看上去非常相似，但实际上难度却大多了&#8230;</p>
+    <content type="html"><![CDATA[<p>前两天做培训的时候，同事问了我一道称蛋的题目，乍一听，跟我们平常所接触的称蛋问题看上去非常相似，但实际上难度却大多了...</p>
 
 <p>先来回顾一下平常所遇见到的普通的称蛋问题:</p>
 
@@ -103,47 +103,6 @@
 <p>变换2，5，6位置以后天平倾斜方向改变，则可以断定坏蛋在2，5，6里面，其判断方法跟上面是一样的。最后还有一种情况，那就是拿走了3，4以后，天平保持平衡，那么很明显，3，4里面就有一只坏蛋了，判断方法可以用最开始的方法。当然也可以直接称3和4，因为如果1，2，3，4那边本来比较重的话，那么3，4之中比较重的是坏蛋，反之就是更轻的为坏蛋。</p>
 
 <p>这是一道非常有趣的题目，用编号加上逻辑推理来减少称量次数，为此记录一下。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dual Monitors in Ubuntu]]></title>
-    <link href="http://Aquietzero.github.com/blog/2012/08/06/dual-monitors-in-ubuntu/"/>
-    <updated>2012-08-06T12:38:00+08:00</updated>
-    <id>http://Aquietzero.github.com/blog/2012/08/06/dual-monitors-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>家里的台式机实在用了太久了，终于在上周走到了生命的尽头。其实坏掉的就只有主机而已，显示器还是非常好的，色彩非常鲜艳美丽。之前一直嫌手提屏幕太小，无论是写代码还是建模，图像处理之类的都非常非常不方便，希望有一个大大的显示器来满足我这些愿望。随着家里的台式电脑的报废，我这个愿望终于得以了实现。</p>
-
-<p>其实在ubuntu上面搞双显示器应该是非常简单的，接线，打开nvidia控制面板进行设置就可以了。但我的ubuntu总是那么的多灾多难，之前就因为识别不了新买的wacom手写板而使我欲望全无。当我接线以后，nvidia控制面板“似乎”识别到了我的三星显示器，但是分辨率却没有合适的，我选择了一个比较接近的分辨率，结果屏幕是扩展了，但是效果并不好。当然，都不是其原生的最佳分辨率，效果当然不好。</p>
-
-<p>我一开始以为外接屏幕的分辨率是受限于手提的屏幕分辨率的，比如手提的分辨率为<code>1366x768</code>，那么外接显示器的纵向分辨率就不能超过<code>768</code>。对于对显示要求很高的我来说，这样的效果是绝对看不顺眼的，忍了一两个小时以后，我开始搜索，问人，后来发现两者的分辨率是可以不一致的，都是可以达到最佳的分辨率。接着就是疯狂的搜索了。</p>
-
-<p>既然没有可选的分辨率，那么就为其添加，这是最基本的思路，于是搜到一大堆的结果，基本上都是说在<code>/etc/X11/xorg.conf</code>里面添加字段来说明，但是这种方法对我的电脑并不适用，修改了以后连X都不能进入了。进入recovery模式修改回来以后又能进去了，于是我抛弃了这种办法。</p>
-
-<p>紧接着，我搜到了<code>xrandr</code>，这条命令不带参数时的作用是列出已经识别出的显示器及其名字，可选分辨率。我得到的结果是</p>
-
-<pre><code>xrandr: Failed to get size of gamma for output default
-</code></pre>
-
-<p>这个反馈给我的第一个反映就是我的三星显示器根本就没有被识别到。我对这个结果进行了搜索，结果发现很多人碰到了这个问题，问题出于外接显示器的<code>EDID</code>没有被识别到。天啊，于是紧接着我搜到<code>read-edid</code>这个工具可以读取<code>EDID</code>，下了工具以后希望有所帮助。于是我使用命令<code>sudo get-edid | parse edid</code>来进行<code>EDID</code>的获取及识别工作，结果又出乎我意料</p>
-
-<pre><code>The EDID data should not be trusted as the VBE call failed
-Error: output block unchanged
-</code></pre>
-
-<p>看到这样的结果心都碎了，这已经是我能搜到的方法了，基本上全部方法的第一步都不成功。于是我打开<code>/var/log/Xorg.0.log</code>，发现根本就是识别不到显示器的，这时候我才想到有可能是硬件的问题(显然，前面的那些方法都迷惑了我，以至于我没有一开始就考虑硬件的问题。不过这也很难说，因为我的双显示器是工作的，只是分辨率不对而已，我根本就没有想想到这是硬件的问题)。</p>
-
-<p>既然知道有可能是硬件的问题，我立刻问爸爸要来了一条新的线，结果就好了&#8230;对此我非常无语，因为折腾了很久&#8230;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Another Fresh Start]]></title>
-    <link href="http://Aquietzero.github.com/blog/2012/08/03/another-fresh-start/"/>
-    <updated>2012-08-03T23:18:00+08:00</updated>
-    <id>http://Aquietzero.github.com/blog/2012/08/03/another-fresh-start</id>
-    <content type="html"><![CDATA[<p>最近几天空间和域名都过期了，实在不想再续费那些php空间了，也不想再去折腾博客系统，于是就偷懒用Octopress了。其实我也不是对博客系统没有兴趣了，只是需要一个写文章的地方，于是就选择了这里。之前很早就听说过Octopress了，也看到非常非常多的人在用，但一直有自己的空间使得我不想去用，但实际上我也好久没有更新过空间了，现在空间没有了，心里不实在了，想快点找个能写东西的地方&#8230;</p>
-
-<p>我不打算把之前的文章搬到这里来了，这里就当作是我一个新的开始吧&#8230;</p>
 ]]></content>
   </entry>
   
