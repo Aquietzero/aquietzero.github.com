@@ -12,3 +12,9 @@ blockquote {
     border-left: solid 7px #ddd;
     padding-left: 10px;
 }
+
+p code, li code {
+    border: none;
+    background: none;
+    font-size: 0.9em;
+}
