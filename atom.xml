@@ -4,7 +4,7 @@
   <title><![CDATA[Null Space]]></title>
   <link href="http://Aquietzero.github.com/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-09-11T11:24:46+08:00</updated>
+  <updated>2012-09-25T19:22:11+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Summary of July]]></title>
+    <link href="http://Aquietzero.github.com/blog/2012/09/25/summary-of-july/"/>
+    <updated>2012-09-25T18:38:00+08:00</updated>
+    <id>http://Aquietzero.github.com/blog/2012/09/25/summary-of-july</id>
+    <content type="html"><![CDATA[<p>自从六月底的助教结束以后，我就来到了UC实习。这段时间不能说学到了很多东西，但也不是什么都没有学到。这段时间感觉很多事务都同时进行着，有点乱，有点充实，也有点彷徨。</p>
+
+<h2>主线1：UC实习</h2>
+
+<p>贯穿这三个月的主线无疑是在UC的实习生活了。说实话，在UC工作我非常愉快，早上九点半上班，包三餐，并且工作环境也还算不错，我每天在座位上效率都很高，但是这是有代价的，这个容后再说。一进UC给我们的任务就是写一个HTML5的游戏，当然，这只是一个热身的项目，为期一个月，旨在要我们熟悉整个开发的流程，并且让我们体验团队合作以及一股作气专心做一件事情的威力，我也确实感受到了。在每天的编程之中，我都充满激情，那些学习的时候感到非常抽象的设计模式居然能自然地在代码重构的时候运用，这是最令人鼓舞的一件事情了。</p>
+
+<p>其实我本来就没正式写过什么游戏，这次的写游戏经历确实使我受益终生。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[On NodeJs Modules]]></title>
