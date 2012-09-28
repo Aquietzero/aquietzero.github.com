@@ -1,2 +1,12 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+blockquote {
+    font-size: 0.9em;
+    color: #999;
+    border-left: solid 7px #ccc;
+}
+
+ol, ul {
+    margin-left: 30px;
+}
