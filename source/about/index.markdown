@@ -18,7 +18,7 @@ footer: true
 + **最喜欢的排版工具：** LaTeX
 + **最喜欢的语言：** C++，JavaScript
 + **最喜欢的框架：** Rails
-+ **最喜欢的方向：** 计算机图形学
++ **最喜欢的方向：** Computer Vision, Computer Graphic, Image Processing, Game Design...
 
 这个列表还是慢慢补全吧...
 
