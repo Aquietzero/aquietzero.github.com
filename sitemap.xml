@@ -30,11 +30,17 @@
         <loc>
             http://Aquietzero.github.com/blog/2012/09/28/translation-il-y-a-trop-de-gens-qui-taime/
         </loc>
-        <lastmod>2012-09-28T14:03:46+08:00</lastmod>
+        <lastmod>2012-10-03T13:49:03+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://Aquietzero.github.com/blog/2012/10/03/translation-juste-une-photo-de-toi/
+        </loc>
+        <lastmod>2012-10-03T13:58:33+08:00</lastmod>
     </url>
     <url>
         <loc>http://Aquietzero.github.com/blog/archives/</loc>
-        <lastmod>2012-09-28T14:03:46+08:00</lastmod>
+        <lastmod>2012-10-03T13:58:33+08:00</lastmod>
     </url>
     <url>
         <loc>http://Aquietzero.github.com/about/</loc>
@@ -42,6 +48,6 @@
     </url>
     <url>
         <loc>http://Aquietzero.github.com/</loc>
-        <lastmod>2012-09-28T14:03:46+08:00</lastmod>
+        <lastmod>2012-10-03T13:58:33+08:00</lastmod>
     </url>
 </urlset>
