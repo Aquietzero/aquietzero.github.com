@@ -10,3 +10,13 @@ blockquote {
 ol, ul {
     margin-left: 30px;
 }
+
+p code, li code {
+    border: none;
+    background: none;
+    font-size: 0.9em;
+}
+
+a {
+    text-decoration: none;
+}
