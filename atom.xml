@@ -4,7 +4,7 @@
   <title><![CDATA[Null Space]]></title>
   <link href="http://Aquietzero.github.com/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-10-10T10:26:56+08:00</updated>
+  <updated>2012-10-10T10:56:31+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Goodbye, UC]]></title>
+    <link href="http://Aquietzero.github.com/blog/2012/10/10/goodbye/"/>
+    <updated>2012-10-10T10:30:00+08:00</updated>
+    <id>http://Aquietzero.github.com/blog/2012/10/10/goodbye</id>
+    <content type="html"><![CDATA[<p>昨天上午找完老师以后，下午就去UC辞职了，从而结束了3个月的实习。</p>
+
+<p>这三个月确实非常难忘，跟其他同学的实习对比了一下，UC的待遇确实是很优厚的，无论是工作环境还是伙食。但毕竟我保研在身，而且想做的事情还有很多，考虑到最后也还是要回到学校，所以还是趁早辞职了。</p>
+
+<p>回想最近一年，我都是在不停地写代码，工程能力可能有所提高，但是渐渐地我发现，我好像一直都在原地踏步，原因在于，我可能把过多的时间都放在写代码上面了，所以没有太多的时间看书以及提高自己的理论修养。我本身非常喜欢数学和物理，但每每想到我每天都在以飞快的速度忘记它们的时候，我就略感伤心。虽然，从工作层面上来看，这些知识其实也没有太大的应用，但是我却不甘心这些辛辛苦苦学来的东西最后是没有用处的。于是我打算先花点时间重温一下它们，如果我每天继续上班的话，那显然是没有这个时间的，所以我还是辞职回到了学校。</p>
+
+<p>在UC工作的过程中，我还学到最重要的一件事情，那就是做事一定要专心以及专一，因为在工作分配上一般都是一个时段只有一项工作，这就直接保证了专心。但是如果不是在工作中，自己可能会有很多异想天开的想法，有时候还会非常冲动地希望一一将其实现，想法当然是好的，但如果不忍住诱惑，往往难以完成。正如上个月的我，开了很多项目，却又无法分身，最后导致各项目都进展缓慢甚至停滞，这无疑得不偿失。</p>
+
+<p>接下来的计划如上所说，先花点时间去复习一下数学，毕竟这是我后面所需要到的重要武器，估计会有比较长的一段时间远离代码了&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Translation: Juste une photo de toi]]></title>
