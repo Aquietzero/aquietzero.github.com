@@ -4,7 +4,7 @@
   <title><![CDATA[Category: NodeJs | Null Space]]></title>
   <link href="http://Aquietzero.github.com/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-10-10T10:56:31+08:00</updated>
+  <updated>2012-10-16T00:37:47+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -20,23 +20,22 @@
     <id>http://Aquietzero.github.com/blog/2012/09/27/framework-for-expressjs-and-client-side-js-mv-star-framwork</id>
     <content type="html"><![CDATA[<p>这段时间一直希望自己写一个单词学习的应用，因为过去用过太多的背单词软件，但是基本上都不符合我的学习规律，并没有能提高我学习外语的热情，鉴于这个学期希望好好学好法语，于是才有了这样的动力。</p>
 
-<h2>工具</h2>
+<h2 id="section">工具</h2>
 
 <p>我将其命名为<strong>Mnemon</strong>，项目详情可以参看<a href="https://github.com/Aquietzero/Mnemon">这里</a>。起名原因以及其含义相信读计算机的朋友们应该一目了然了。我希望完全用javascript来完成这个应用，所以采用如下组合：</p>
 
 <ul>
-<li><strong>数据库：</strong> Mongodb</li>
-<li><strong>服务器：</strong> Nodejs</li>
-<li><strong>服务端框架：</strong> Express.js</li>
-<li><strong>客户端框架：</strong> Ember.js</li>
+  <li><strong>数据库：</strong> Mongodb</li>
+  <li><strong>服务器：</strong> Nodejs</li>
+  <li><strong>服务端框架：</strong> Express.js</li>
+  <li><strong>客户端框架：</strong> Ember.js</li>
 </ul>
 
-
-<h2>文件目录结构</h2>
+<h2 id="section-1">文件目录结构</h2>
 
 <p>由于这个项目才刚刚开始，这篇文章打算简单描述一下Mnemon的架构。</p>
 
-<h3>外层目录结构</h3>
+<h3 id="section-2">外层目录结构</h3>
 
 <p>下面是最外层的文件结构：</p>
 
@@ -54,7 +53,7 @@
 
 <p>下面先简单讲述一下这个最外层的目录结构。最主要的两个文件夹分别是<code>client</code>和<code>server</code>，分别存放客户端和服务端的代码。<code>config</code>里面存放关于这个应用的服务端配置文件，<code>doc</code>存放相关文档，即开发日志，问题总结之类的文档。<code>lib</code>存放整个项目所用到的一些共用库。<code>index.js</code>则是整个应用的入口，其中包含了对<strong>coffeescript</strong>的支持，从这个文件开始的所有js文件实际上都是coffeescript来的。<code>package.json</code>描述了这个项目的包依赖。<code>server.coffee</code>则是真正意义上的应用入口，但是它是靠<code>index.js</code>来调用的。</p>
 
-<h3>客户端目录结构</h3>
+<h3 id="section-3">客户端目录结构</h3>
 
 <p>下面详细看看这些目录里面的内容，首先是客户端的：</p>
 
@@ -71,7 +70,7 @@
 
 <p>客户端里面放的实际上是一整个分离的客户端代码，<code>index.html</code>是客户端的入口，<code>libs</code>里面放着客户端所需要的库，由于我这个应用客户端的框架用的是<strong>Ember.js</strong>，于是这里面就放着与<strong>Ember.js</strong>相关的库。<code>css</code>是整个客户端的样式代码。在<code>coffee</code>里面则放着客户端最核心的代码，即MVC的代码，其后会被编译成对应的javascript，最后在<code>index.html</code>里面引用的也就是这些编译好的javascript代码。</p>
 
-<h3>服务端目录结构</h3>
+<h3 id="section-4">服务端目录结构</h3>
 
 <p>接下来看看服务端的代码：</p>
 
@@ -87,7 +86,7 @@
 
 <p>服务器端其实代码结构跟客户端也没有太大的差别，实际上大家都是MVC结构嘛。这样的目录结构实际上是参照rails的目录结构来构建的。但是这里的<code>javascript</code>以及<code>stylesheet</code>实际上是服务端渲染页面的代码，这个是需要注意的。</p>
 
-<h2>配置以及启动</h2>
+<h2 id="section-5">配置以及启动</h2>
 
 <p>然后最重要的，各部分的桥梁可以说是<code>config</code>文件夹了：</p>
 
@@ -119,15 +118,14 @@ node index
     <id>http://Aquietzero.github.com/blog/2012/09/11/on-nodejs-modules</id>
     <content type="html"><![CDATA[<p>对于Node的初学者来说，可能对模块化方面比较模糊，网上的资料比较分散，在此总结一下。</p>
 
-<h2>require 和 exports</h2>
+<h2 id="require--exports">require 和 exports</h2>
 
 <p>个人感觉客户端js的最大缺点就是模块化难，原因有二：</p>
 
 <ol>
-<li>JavaScript没有类的概念，虽然可以用一些方法来模拟类，但是远没有直接用<code>class</code>定义来得直接，针对这个缺点，可以用<strong>CoffeeScript</strong>来替代，但在下一篇文章会说说如何用JavaScript来模拟类。</li>
-<li>JavaScript没有包含文件的功能，这就导致了必须自己来组织文件的顺序，从而在<code>index.html</code>里面按顺序把包含的<code>.js</code>文件一一列出。当然还有其他的方式，但是原理还是如此。使用工具的话推荐<a href="https://github.com/jrburke/requirejs">RequireJs</a>以及<a href="https://github.com/substack/node-browserify">browserify</a>，但使用起来依然不是那么方便。</li>
+  <li>JavaScript没有类的概念，虽然可以用一些方法来模拟类，但是远没有直接用<code>class</code>定义来得直接，针对这个缺点，可以用<strong>CoffeeScript</strong>来替代，但在下一篇文章会说说如何用JavaScript来模拟类。</li>
+  <li>JavaScript没有包含文件的功能，这就导致了必须自己来组织文件的顺序，从而在<code>index.html</code>里面按顺序把包含的<code>.js</code>文件一一列出。当然还有其他的方式，但是原理还是如此。使用工具的话推荐<a href="https://github.com/jrburke/requirejs">RequireJs</a>以及<a href="https://github.com/substack/node-browserify">browserify</a>，但使用起来依然不是那么方便。</li>
 </ol>
-
 
 <p>为此，在Node里面就方便很多了，其默认将各个文件看作是各个独立的<strong>Module</strong>，即在一个文件里面定义的变量，函数都不为其他文件所见，下面举个简单的例子。比如在文件<code>add.js</code>如下：</p>
 
@@ -141,7 +139,7 @@ var add = function(a, b) { return a + b; }
 
 <p>``` javascript
 // add.js
-var file_name = 'add.js';
+var file_name = ‘add.js’;
 var add = function(a, b) { return a + b; }</p>
 
 <p>exports.file_name = file_name;
@@ -150,39 +148,33 @@ exports.add = add;
 
 <p>这样，我们就可以在别的文件使用这些变量了，在<code>use.js</code>里面使用方式如下：</p>
 
-<p>``` javascript
+<p>``` javascript 
 // use.js
-var add_file = require('./add');</p>
+var add_file = require(‘./add’);</p>
 
-<p>console.log(add_file.file_name); // output => add.js
-console.log(add_file.add(3, 4)); // output => 7
+<p>console.log(add_file.file_name); // output =&gt; add.js
+console.log(add_file.add(3, 4)); // output =&gt; 7
 ```</p>
 
 <p>由此可以看出，在<code>add.js</code>里面，我们把需要暴露的变量绑定到<code>exports</code>对象上面，然后真正返回出去的实际上是<code>exports</code>对象，在<code>use.js</code>里面调用<code>require</code>语句的时候，返回出来的<code>exports</code>对象被<code>add_file</code>变量接住了，所以就可以使用那些本来绑定在<code>exports</code>对象上面的变量了。</p>
 
-<h2>exports 和 module.exports</h2>
+<h2 id="exports--moduleexports">exports 和 module.exports</h2>
 
 <p>既然<code>exports</code>是这样的一个对象，那么我们也可以这样进行绑定，比如<code>person.js</code>如下：</p>
 
-<p>``` javascript
+<p>``` javascript 
 // person.js
-var Person = function(name, age) {</p>
+var Person = function(name, age) {
+    this.name = name;
+    this.age  = age;
+}</p>
 
-<pre><code>this.name = name;
-this.age  = age;
-</code></pre>
-
-<p>}</p>
-
-<p>Person.prototype = {</p>
-
-<pre><code>introduce: function() {
-    console.log('I am ' + this.name + '.');
-    console.log('I am ' + this.age + ' years old.');
-}
-</code></pre>
-
-<p>}</p>
+<p>Person.prototype = {
+    introduce: function() {
+        console.log(‘I am ‘ + this.name + ‘.’);
+        console.log(‘I am ‘ + this.age + ‘ years old.’);
+    }
+}</p>
 
 <p>module.exports = Person;
 // exports = Person; DOES NOT WORK!
@@ -192,30 +184,24 @@ this.age  = age;
 
 <p>``` javascript
 // class.js
-var Person = require('./person');</p>
+var Person = require(‘./person’);</p>
 
-<p>var class = [</p>
+<p>var class = [
+    new Person(‘Tom’  , 13),
+    new Person(‘Jim’  , 12),
+    new Person(‘Mary’ , 12)
+];</p>
 
-<pre><code>new Person('Tom'  , 13),
-new Person('Jim'  , 12),
-new Person('Mary' , 12)
-</code></pre>
+<p>class.map(function(person) {
+    person.introduce();
+});</p>
 
-<p>];</p>
-
-<p>class.map(function(person) {</p>
-
-<pre><code>person.introduce();
-</code></pre>
-
-<p>});</p>
-
-<p>/<em>*
+<p>/**
  * output:
  * I am Tom. I am 13 years old.
  * I am Jim. I am 12 years old.
  * I am Han meimei. I am 13 years old.
- </em>/
+ */
 ```</p>
 
 <p>可以看出，这个时候把<code>Person</code>作为整个模块的输出，那么<code>exports</code>和<code>module.exports</code>有什么区别呢？<strong>实际上，<code>exports</code>只是<code>module.exports</code>的一个helper，<code>exports</code>的作用在于收集需要暴露的变量，并将其包装为一个对象交给<code>module.exports</code>进行输出，所以<code>exports = Person</code>没有任何效果，<code>Person</code>没有绑定到<code>exports</code>。</strong>既然这样，写的时候就必须注意了，因为<code>exports</code>最后会交给<code>module.exports</code>进行输出，所以如果这两者同时存在，绑定到<code>exports</code>的变量会被<code>module.exports</code>的值所覆盖，即：</p>
@@ -225,7 +211,7 @@ module.exports = Person;
 exports.something = 9; // `something` is blocked.
 </code></p>
 
-<h2>模块化组织</h2>
+<h2 id="section">模块化组织</h2>
 
 <p>明白了上面所说的以后，进行模块化组织就很方便了，看看如下的文件结构：</p>
 
@@ -240,37 +226,28 @@ exports.something = 9; // `something` is blocked.
 
 <p>``` javascript
 // add.js
-var add = function(a, b) {</p>
-
-<pre><code>return a + b;
-</code></pre>
-
-<p>}
+var add = function(a, b) {
+    return a + b;
+}
 module.exports = add;</p>
 
 <p>// sub.js
-var sub = function(a, b) {</p>
-
-<pre><code>return a - b;
-</code></pre>
-
-<p>}
+var sub = function(a, b) {
+    return a - b;
+}
 module.exports = add;</p>
 
 <p>// math.js
-module.exports = {</p>
-
-<pre><code>add: require('./add'),
-sub: require('./sub'),
-</code></pre>
-
-<p>}</p>
+module.exports = {
+    add: require(‘./add’),
+    sub: require(‘./sub’),
+}</p>
 
 <p>// use.js
-var math = require('./lib/math');</p>
+var math = require(‘./lib/math’);</p>
 
-<p>console.log(math.add(3, 4)); // output =>  7
-console.log(math.sub(3, 4)); // output => -1
+<p>console.log(math.add(3, 4)); // output =&gt;  7
+console.log(math.sub(3, 4)); // output =&gt; -1 
 ```</p>
 ]]></content>
   </entry>

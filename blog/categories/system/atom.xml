@@ -4,7 +4,7 @@
   <title><![CDATA[Category: System | Null Space]]></title>
   <link href="http://Aquietzero.github.com/blog/categories/system/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-10-10T10:56:31+08:00</updated>
+  <updated>2012-10-16T00:37:47+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -39,7 +39,7 @@ Error: output block unchanged
 
 <p>看到这样的结果心都碎了，这已经是我能搜到的方法了，基本上全部方法的第一步都不成功。于是我打开<code>/var/log/Xorg.0.log</code>，发现根本就是识别不到显示器的，这时候我才想到有可能是硬件的问题(显然，前面的那些方法都迷惑了我，以至于我没有一开始就考虑硬件的问题。不过这也很难说，因为我的双显示器是工作的，只是分辨率不对而已，我根本就没有想想到这是硬件的问题)。</p>
 
-<p>既然知道有可能是硬件的问题，我立刻问爸爸要来了一条新的线，结果就好了...对此我非常无语，因为折腾了很久...</p>
+<p>既然知道有可能是硬件的问题，我立刻问爸爸要来了一条新的线，结果就好了…对此我非常无语，因为折腾了很久…</p>
 ]]></content>
   </entry>
   

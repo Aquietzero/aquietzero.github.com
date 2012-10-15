@@ -29,6 +29,21 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
   
 
 </head>
@@ -93,23 +108,22 @@
 
 <div class="entry-content"><p>这段时间一直希望自己写一个单词学习的应用，因为过去用过太多的背单词软件，但是基本上都不符合我的学习规律，并没有能提高我学习外语的热情，鉴于这个学期希望好好学好法语，于是才有了这样的动力。</p>
 
-<h2>工具</h2>
+<h2 id="section">工具</h2>
 
 <p>我将其命名为<strong>Mnemon</strong>，项目详情可以参看<a href="https://github.com/Aquietzero/Mnemon">这里</a>。起名原因以及其含义相信读计算机的朋友们应该一目了然了。我希望完全用javascript来完成这个应用，所以采用如下组合：</p>
 
 <ul>
-<li><strong>数据库：</strong> Mongodb</li>
-<li><strong>服务器：</strong> Nodejs</li>
-<li><strong>服务端框架：</strong> Express.js</li>
-<li><strong>客户端框架：</strong> Ember.js</li>
+  <li><strong>数据库：</strong> Mongodb</li>
+  <li><strong>服务器：</strong> Nodejs</li>
+  <li><strong>服务端框架：</strong> Express.js</li>
+  <li><strong>客户端框架：</strong> Ember.js</li>
 </ul>
 
-
-<h2>文件目录结构</h2>
+<h2 id="section-1">文件目录结构</h2>
 
 <p>由于这个项目才刚刚开始，这篇文章打算简单描述一下Mnemon的架构。</p>
 
-<h3>外层目录结构</h3>
+<h3 id="section-2">外层目录结构</h3>
 
 <p>下面是最外层的文件结构：</p>
 
@@ -127,7 +141,7 @@
 
 <p>下面先简单讲述一下这个最外层的目录结构。最主要的两个文件夹分别是<code>client</code>和<code>server</code>，分别存放客户端和服务端的代码。<code>config</code>里面存放关于这个应用的服务端配置文件，<code>doc</code>存放相关文档，即开发日志，问题总结之类的文档。<code>lib</code>存放整个项目所用到的一些共用库。<code>index.js</code>则是整个应用的入口，其中包含了对<strong>coffeescript</strong>的支持，从这个文件开始的所有js文件实际上都是coffeescript来的。<code>package.json</code>描述了这个项目的包依赖。<code>server.coffee</code>则是真正意义上的应用入口，但是它是靠<code>index.js</code>来调用的。</p>
 
-<h3>客户端目录结构</h3>
+<h3 id="section-3">客户端目录结构</h3>
 
 <p>下面详细看看这些目录里面的内容，首先是客户端的：</p>
 
@@ -144,7 +158,7 @@
 
 <p>客户端里面放的实际上是一整个分离的客户端代码，<code>index.html</code>是客户端的入口，<code>libs</code>里面放着客户端所需要的库，由于我这个应用客户端的框架用的是<strong>Ember.js</strong>，于是这里面就放着与<strong>Ember.js</strong>相关的库。<code>css</code>是整个客户端的样式代码。在<code>coffee</code>里面则放着客户端最核心的代码，即MVC的代码，其后会被编译成对应的javascript，最后在<code>index.html</code>里面引用的也就是这些编译好的javascript代码。</p>
 
-<h3>服务端目录结构</h3>
+<h3 id="section-4">服务端目录结构</h3>
 
 <p>接下来看看服务端的代码：</p>
 
@@ -160,7 +174,7 @@
 
 <p>服务器端其实代码结构跟客户端也没有太大的差别，实际上大家都是MVC结构嘛。这样的目录结构实际上是参照rails的目录结构来构建的。但是这里的<code>javascript</code>以及<code>stylesheet</code>实际上是服务端渲染页面的代码，这个是需要注意的。</p>
 
-<h2>配置以及启动</h2>
+<h2 id="section-5">配置以及启动</h2>
 
 <p>然后最重要的，各部分的桥梁可以说是<code>config</code>文件夹了：</p>
 
@@ -176,12 +190,11 @@
 
 <p>将客户端以及服务端分开需要两处启动。服务端直接用如下的命令启动：</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>sudo mongod
-</span><span class='line'>node index
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="sh"><span class="line">sudo mongod
+</span><span class="line">node index
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>客户端可以放在web根目录下，如果是本地应用的话也可以开python的服务器，这样打开客户端里面的<code>index.html</code>即可访问应用。</p>
 </div>
@@ -251,6 +264,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/16/adding-mathjax-support-to-octopress/">Adding MathJax Support to Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/10/goodbye/">Goodbye, UC</a>
       </li>
     
@@ -264,10 +281,6 @@
     
       <li class="post">
         <a href="/blog/2012/09/27/framework-for-expressjs-and-client-side-js-mv-star-framwork/">Framework for expressjs and Client-side js MV* Framwork</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/25/summary-of-july/">Summary of July, August and September</a>
       </li>
     
   </ul>
@@ -310,6 +323,7 @@
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
 <li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
 <li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
 <li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
 <li class='category'><a href='/blog/categories/translation/'>Translation (2)</a></li>

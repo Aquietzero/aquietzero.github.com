@@ -31,6 +31,21 @@ Pour te &hellip;">
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
   
 
 </head>
@@ -222,6 +237,10 @@ Je veux juste t'oublier 我只想把你忘记
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/16/adding-mathjax-support-to-octopress/">Adding MathJax Support to Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/10/goodbye/">Goodbye, UC</a>
       </li>
     
@@ -235,10 +254,6 @@ Je veux juste t'oublier 我只想把你忘记
     
       <li class="post">
         <a href="/blog/2012/09/27/framework-for-expressjs-and-client-side-js-mv-star-framwork/">Framework for expressjs and Client-side js MV* Framwork</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/25/summary-of-july/">Summary of July, August and September</a>
       </li>
     
   </ul>
@@ -281,6 +296,7 @@ Je veux juste t'oublier 我只想把你忘记
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
 <li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
 <li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
 <li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
 <li class='category'><a href='/blog/categories/translation/'>Translation (2)</a></li>

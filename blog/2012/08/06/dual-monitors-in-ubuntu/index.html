@@ -29,6 +29,21 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
   
 
 </head>
@@ -112,7 +127,7 @@ Error: output block unchanged
 
 <p>看到这样的结果心都碎了，这已经是我能搜到的方法了，基本上全部方法的第一步都不成功。于是我打开<code>/var/log/Xorg.0.log</code>，发现根本就是识别不到显示器的，这时候我才想到有可能是硬件的问题(显然，前面的那些方法都迷惑了我，以至于我没有一开始就考虑硬件的问题。不过这也很难说，因为我的双显示器是工作的，只是分辨率不对而已，我根本就没有想想到这是硬件的问题)。</p>
 
-<p>既然知道有可能是硬件的问题，我立刻问爸爸要来了一条新的线，结果就好了&#8230;对此我非常无语，因为折腾了很久&#8230;</p>
+<p>既然知道有可能是硬件的问题，我立刻问爸爸要来了一条新的线，结果就好了…对此我非常无语，因为折腾了很久…</p>
 </div>
 
 
@@ -180,6 +195,10 @@ Error: output block unchanged
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/16/adding-mathjax-support-to-octopress/">Adding MathJax Support to Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/10/goodbye/">Goodbye, UC</a>
       </li>
     
@@ -193,10 +212,6 @@ Error: output block unchanged
     
       <li class="post">
         <a href="/blog/2012/09/27/framework-for-expressjs-and-client-side-js-mv-star-framwork/">Framework for expressjs and Client-side js MV* Framwork</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/25/summary-of-july/">Summary of July, August and September</a>
       </li>
     
   </ul>
@@ -239,6 +254,7 @@ Error: output block unchanged
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
 <li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
 <li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
 <li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
 <li class='category'><a href='/blog/categories/translation/'>Translation (2)</a></li>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Express | Null Space]]></title>
   <link href="http://Aquietzero.github.com/blog/categories/express/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-10-10T10:56:31+08:00</updated>
+  <updated>2012-10-16T00:37:47+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -20,23 +20,22 @@
     <id>http://Aquietzero.github.com/blog/2012/09/27/framework-for-expressjs-and-client-side-js-mv-star-framwork</id>
     <content type="html"><![CDATA[<p>这段时间一直希望自己写一个单词学习的应用，因为过去用过太多的背单词软件，但是基本上都不符合我的学习规律，并没有能提高我学习外语的热情，鉴于这个学期希望好好学好法语，于是才有了这样的动力。</p>
 
-<h2>工具</h2>
+<h2 id="section">工具</h2>
 
 <p>我将其命名为<strong>Mnemon</strong>，项目详情可以参看<a href="https://github.com/Aquietzero/Mnemon">这里</a>。起名原因以及其含义相信读计算机的朋友们应该一目了然了。我希望完全用javascript来完成这个应用，所以采用如下组合：</p>
 
 <ul>
-<li><strong>数据库：</strong> Mongodb</li>
-<li><strong>服务器：</strong> Nodejs</li>
-<li><strong>服务端框架：</strong> Express.js</li>
-<li><strong>客户端框架：</strong> Ember.js</li>
+  <li><strong>数据库：</strong> Mongodb</li>
+  <li><strong>服务器：</strong> Nodejs</li>
+  <li><strong>服务端框架：</strong> Express.js</li>
+  <li><strong>客户端框架：</strong> Ember.js</li>
 </ul>
 
-
-<h2>文件目录结构</h2>
+<h2 id="section-1">文件目录结构</h2>
 
 <p>由于这个项目才刚刚开始，这篇文章打算简单描述一下Mnemon的架构。</p>
 
-<h3>外层目录结构</h3>
+<h3 id="section-2">外层目录结构</h3>
 
 <p>下面是最外层的文件结构：</p>
 
@@ -54,7 +53,7 @@
 
 <p>下面先简单讲述一下这个最外层的目录结构。最主要的两个文件夹分别是<code>client</code>和<code>server</code>，分别存放客户端和服务端的代码。<code>config</code>里面存放关于这个应用的服务端配置文件，<code>doc</code>存放相关文档，即开发日志，问题总结之类的文档。<code>lib</code>存放整个项目所用到的一些共用库。<code>index.js</code>则是整个应用的入口，其中包含了对<strong>coffeescript</strong>的支持，从这个文件开始的所有js文件实际上都是coffeescript来的。<code>package.json</code>描述了这个项目的包依赖。<code>server.coffee</code>则是真正意义上的应用入口，但是它是靠<code>index.js</code>来调用的。</p>
 
-<h3>客户端目录结构</h3>
+<h3 id="section-3">客户端目录结构</h3>
 
 <p>下面详细看看这些目录里面的内容，首先是客户端的：</p>
 
@@ -71,7 +70,7 @@
 
 <p>客户端里面放的实际上是一整个分离的客户端代码，<code>index.html</code>是客户端的入口，<code>libs</code>里面放着客户端所需要的库，由于我这个应用客户端的框架用的是<strong>Ember.js</strong>，于是这里面就放着与<strong>Ember.js</strong>相关的库。<code>css</code>是整个客户端的样式代码。在<code>coffee</code>里面则放着客户端最核心的代码，即MVC的代码，其后会被编译成对应的javascript，最后在<code>index.html</code>里面引用的也就是这些编译好的javascript代码。</p>
 
-<h3>服务端目录结构</h3>
+<h3 id="section-4">服务端目录结构</h3>
 
 <p>接下来看看服务端的代码：</p>
 
@@ -87,7 +86,7 @@
 
 <p>服务器端其实代码结构跟客户端也没有太大的差别，实际上大家都是MVC结构嘛。这样的目录结构实际上是参照rails的目录结构来构建的。但是这里的<code>javascript</code>以及<code>stylesheet</code>实际上是服务端渲染页面的代码，这个是需要注意的。</p>
 
-<h2>配置以及启动</h2>
+<h2 id="section-5">配置以及启动</h2>
 
 <p>然后最重要的，各部分的桥梁可以说是<code>config</code>文件夹了：</p>
 

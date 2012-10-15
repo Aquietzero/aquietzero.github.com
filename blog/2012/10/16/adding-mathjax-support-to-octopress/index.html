@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Trivial - Null Space</title>
+  <title>Adding MathJax Support to Octopress - Null Space</title>
   <meta name="author" content="zero">
 
   
-  <meta name="description" content="Category: Trivial">
+  <meta name="description" content="最近开始复习数学了，只可惜github上的markdown并不支持数学公式，所以有些总结估计还是得放在博客里，下面是效果： % <![CDATA[ \begin{align}
+\mbox{Union: } & A\cup B = \{x\mid x\in A \mbox{ or } x\in B &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://Aquietzero.github.comblog/categories/trivial/">
+  <link rel="canonical" href="http://Aquietzero.github.com/blog/2012/10/16/adding-mathjax-support-to-octopress/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -79,36 +80,102 @@ MathJax.Hub.Config({
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Trivial</h1>
+    
+      <h1 class="entry-title">Adding MathJax Support to Octopress</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-16T00:14:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>最近开始复习数学了，只可惜github上的markdown并不支持数学公式，所以有些总结估计还是得放在博客里，下面是效果：</p>
 
-  
-  <h2>2012</h2>
+<script type="math/tex; mode=display">% <![CDATA[
 
-<article>
-  
-<h1><a href="/blog/2012/08/03/another-fresh-start/">Another Fresh Start</a></h1>
-<time datetime="2012-08-03T23:18:00+08:00" pubdate><span class='month'>Aug</span> <span class='day'>03</span> <span class='year'>2012</span></time>
+\begin{align}
+\mbox{Union: } & A\cup B = \{x\mid x\in A \mbox{ or } x\in B\} \\
+\mbox{Concatenation: } & A\circ B  = \{xy\mid x\in A \mbox{ and } y\in B\} \\
+\mbox{Star: } & A^\star  = \{x_1x_2\ldots x_k \mid  k\geq 0 \mbox{ and each } x_i\in A\} \\
+\end{align}
+ %]]></script>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/trivial/'>Trivial</a></span>
-</footer>
+<p>步骤主要参考以下博客，既然他已经说得如此详细，我就没必要浪费唇舌了，所以直接上链接吧。</p>
 
-
-</article>
-
+<p><a href="http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/">http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/</a></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">zero</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-16T00:14:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/10/goodbye/" title="Previous Post: Goodbye, UC">&laquo; Goodbye, UC</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -209,7 +276,10 @@ MathJax.Hub.Config({
       var disqus_shortname = 'aquietzero';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Aquietzero.github.com/blog/2012/10/16/adding-mathjax-support-to-octopress/';
+        var disqus_url = 'http://Aquietzero.github.com/blog/2012/10/16/adding-mathjax-support-to-octopress/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
