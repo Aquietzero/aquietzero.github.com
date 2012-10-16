@@ -53,8 +53,14 @@
         <lastmod>2012-10-16T12:45:28+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://Aquietzero.github.com/blog/2012/10/16/an-interesting-probability-problem-n-persons-in-a-circle/
+        </loc>
+        <lastmod>2012-10-16T20:22:53+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://Aquietzero.github.com/blog/archives/</loc>
-        <lastmod>2012-10-16T12:45:28+08:00</lastmod>
+        <lastmod>2012-10-16T20:22:53+08:00</lastmod>
     </url>
     <url>
         <loc>http://Aquietzero.github.com/about/</loc>
@@ -62,6 +68,6 @@
     </url>
     <url>
         <loc>http://Aquietzero.github.com/</loc>
-        <lastmod>2012-10-16T12:45:28+08:00</lastmod>
+        <lastmod>2012-10-16T20:22:53+08:00</lastmod>
     </url>
 </urlset>

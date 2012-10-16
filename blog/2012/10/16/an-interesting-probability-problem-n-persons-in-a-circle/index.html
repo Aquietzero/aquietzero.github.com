@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Goodbye, UC - Null Space</title>
+  <title>An Interesting Probability Problem: N Persons in a Circle - Null Space</title>
   <meta name="author" content="zero">
 
   
-  <meta name="description" content="昨天上午找完老师以后，下午就去UC辞职了，从而结束了3个月的实习。 这三个月确实非常难忘，跟其他同学的实习对比了一下，UC的待遇确实是很优厚的，无论是工作环境还是伙食。但毕竟我保研在身，而且想做的事情还有很多，考虑到最后也还是要回到学校，所以还是趁早辞职了。 回想最近一年，我都是在不停地写代码， &hellip;">
+  <meta name="description" content="今天看到了一道有趣的题目： 若n个人站成一排，其中有A，B两人，问夹在A和B之间恰好有r个人的概率是多少？如果他们不是站在一排，而是站在一圈，那结果又是如何呢？ 对于前一个问，解起来并不是太难，只要细心一点一般不会做错。其中n个人排成一排，总的排列数是$n!$， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://Aquietzero.github.com/blog/2012/10/10/goodbye/">
+  <link rel="canonical" href="http://Aquietzero.github.com/blog/2012/10/16/an-interesting-probability-problem-n-persons-in-a-circle/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -83,7 +83,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Goodbye, UC</h1>
+      <h1 class="entry-title">An Interesting Probability Problem: N Persons in a Circle</h1>
     
     
       <p class="meta">
@@ -99,22 +99,93 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-10-10T10:30:00+08:00" pubdate data-updated="true">Oct 10<span>th</span>, 2012</time>
+<time datetime="2012-10-16T17:00:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>昨天上午找完老师以后，下午就去UC辞职了，从而结束了3个月的实习。</p>
+<div class="entry-content"><p>今天看到了一道有趣的题目：</p>
 
-<p>这三个月确实非常难忘，跟其他同学的实习对比了一下，UC的待遇确实是很优厚的，无论是工作环境还是伙食。但毕竟我保研在身，而且想做的事情还有很多，考虑到最后也还是要回到学校，所以还是趁早辞职了。</p>
+<blockquote>
+  <p>若n个人站成一排，其中有A，B两人，问夹在A和B之间恰好有r个人的概率是多少？如果他们不是站在一排，而是站在一圈，那结果又是如何呢？</p>
+</blockquote>
 
-<p>回想最近一年，我都是在不停地写代码，工程能力可能有所提高，但是渐渐地我发现，我好像一直都在原地踏步，原因在于，我可能把过多的时间都放在写代码上面了，所以没有太多的时间看书以及提高自己的理论修养。我本身非常喜欢数学和物理，但每每想到我每天都在以飞快的速度忘记它们的时候，我就略感伤心。虽然，从工作层面上来看，这些知识其实也没有太大的应用，但是我却不甘心这些辛辛苦苦学来的东西最后是没有用处的。于是我打算先花点时间重温一下它们，如果我每天继续上班的话，那显然是没有这个时间的，所以我还是辞职回到了学校。</p>
+<p>对于前一个问，解起来并不是太难，只要细心一点一般不会做错。其中n个人排成一排，总的排列数是$n!$，然后考虑为了促成上面描述的状况经过了什么步骤。</p>
 
-<p>在UC工作的过程中，我还学到最重要的一件事情，那就是做事一定要专心以及专一，因为在工作分配上一般都是一个时段只有一项工作，这就直接保证了专心。但是如果不是在工作中，自己可能会有很多异想天开的想法，有时候还会非常冲动地希望一一将其实现，想法当然是好的，但如果不忍住诱惑，往往难以完成。正如上个月的我，开了很多项目，却又无法分身，最后导致各项目都进展缓慢甚至停滞，这无疑得不偿失。</p>
+<ol>
+  <li>
+    <p>首先当然是从n个人里面选出r个(记住除去A和B)，让其排在A和B的中间，注意，选出r个人以后还得对其进行排列，所以有</p>
 
-<p>接下来的计划如上所说，先花点时间去复习一下数学，毕竟这是我后面所需要到的重要武器，估计会有比较长的一段时间远离代码了…</p>
+<script type="math/tex; mode=display">
+ \dbinom{n-2}r r!
+ </script>
+  </li>
+  <li>
+    <p>然后要对剩下的人进行排列，于是有$(n-r-2)!$种排法，排完以后还必须将他们分成两部分排在A的左边和B的右边，这样就有$(n-r-1)$种分法，极端情况是全部排在一边。这样与步骤1结合起来，就有下面的排列数：</p>
+
+<script type="math/tex; mode=display">
+ \dbinom{n-2}r r! (n-r-1)!
+ </script>
+  </li>
+  <li>
+    <p>最后，将A和B位置交换又能得到一组对称的排列，所以总概率为：</p>
+
+<script type="math/tex; mode=display">
+ P = \frac{2 \dbinom{n-2}r r! (n-r-1)!}{n!}
+ </script>
+  </li>
+</ol>
+
+<p>稍微将其化简，有：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+P 
+    &= \frac{2 \dbinom{n-2}r r! (n-r-1)!}{n!} \\
+    &= \frac{2r!(n-r-1)!}{n!} \frac{(n-2)!}{r!(n-r-2)!} \\
+    &= \frac{2(n-r-1)}{n(n-1)}
+\end{align}
+ %]]></script>
+
+<p>接着考虑第二问。在第二问中，n个人再也不是排成一排了，所以其总排列数会有所变化。观察下面的排列：</p>
+
+<script type="math/tex; mode=display">
+p_1, p_2, p_3, \dotsc p_n
+</script>
+
+<p>注意到，当n个人排成一圈以后，本来在排成一排的时候出现的排列会重复，比如：</p>
+
+<script type="math/tex; mode=display">
+p_2, p_3, \dotsc p_n, p_1 \\
+p_3, \dotsc p_n, p_1, p_2
+</script>
+
+<p>等等的排列都是重复的，重复次数为n。比如排成一个圈以后排列数是P，那么这P个排列中，每一个排列都会在排成一排的情况中衍生出n种不同的排列，所以排成一个圈的排列数刚好是排成一排的排列数的$1/n$，所以其总排列数为$(n-1)!$。</p>
+
+<p>之后的计算其实跟第一问比较相似，就是有一点点不一样而已。由于方向是从A到B，所以A与B之间的人还是需要排序的。从$n-2$个人里面抽出r个人，并对他们进行排列：</p>
+
+<script type="math/tex; mode=display">
+\dbinom{n-2}r r!
+</script>
+
+<p>然后还要对剩下的人进行排列，即$(n-r-2)!$，但是跟第一问不同的是，这些人并不需要分成两个部分了。因为大家都排成一个圈，他们总是连在一起的。<strong>再有一点比较重要的，那就是A和B即使调换位置也没有增加什么排列，那是因为A到B有序，并且圈是循环的，所以那r个人的位置相对于A和B来说是不变的，即时A和B交换了位置，那么那r个人的位置也是会反过来的。</strong>这样就有如下的概率：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+P 
+    &= \frac{\dbinom{n-2}r r! (n-r-2)!}{(n-1)!} \\
+    &= \frac{(n-2)!}{r!(n-r-2)!} \frac{r!(n-r-2)!}{(n-1)!} \\
+    &= \frac{1}{n-1}
+\end{align}
+ %]]></script>
+
+<p>可以看出最后的概率是跟r一点关系都没有的，乍一看有点神奇，其实认真想想，还有一个 更为简便的方法来解决这个问题。这个问题的第二问可以转化为：B出现在从A数起的第r+1个位置的概率。</p>
+
+<p>由于大家排成一个圈，所以A的位置并不重要，但是B必须和A相隔r个人，而这个位置是确定的，那就相当与要在$n-1$个位置里面挑一个，那当然，挑中这个位置的概率就是$1/(n-1)$了。</p>
 </div>
 
 
@@ -137,12 +208,12 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-10-10T10:30:00+08:00" pubdate data-updated="true">Oct 10<span>th</span>, 2012</time>
+<time datetime="2012-10-16T17:00:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/life/'>Life</a>
+    <a class='category' href='/blog/categories/math/'>Math</a>, <a class='category' href='/blog/categories/probability/'>Probability</a>
   
 </span>
 
@@ -158,10 +229,8 @@ MathJax.Hub.Config({
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/03/translation-juste-une-photo-de-toi/" title="Previous Post: Translation: Juste une photo de toi">&laquo; Translation: Juste une photo de toi</a>
+        <a class="basic-alignment left" href="/blog/2012/10/16/the-integral-form-of-factorial/" title="Previous Post: The Integral Form of Factorial">&laquo; The Integral Form of Factorial</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/10/16/adding-mathjax-support-to-octopress/" title="Next Post: Adding MathJax Support to Octopress">Adding MathJax Support to Octopress &raquo;</a>
       
     </p>
   </footer>
@@ -275,8 +344,8 @@ MathJax.Hub.Config({
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://Aquietzero.github.com/blog/2012/10/10/goodbye/';
-        var disqus_url = 'http://Aquietzero.github.com/blog/2012/10/10/goodbye/';
+        var disqus_identifier = 'http://Aquietzero.github.com/blog/2012/10/16/an-interesting-probability-problem-n-persons-in-a-circle/';
+        var disqus_url = 'http://Aquietzero.github.com/blog/2012/10/16/an-interesting-probability-problem-n-persons-in-a-circle/';
         var disqus_script = 'embed.js';
       
     (function () {
