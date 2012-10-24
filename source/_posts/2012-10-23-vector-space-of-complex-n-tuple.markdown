@@ -40,11 +40,11 @@ $$
 
 ## 一些例子
 
-证明：对$\Bbb C^n$中任意两个向量$\vec{A}$和$\vec{B}$，有恒等式
+**1. 证明：对$\Bbb C^n$中任意两个向量$\vec{A}$和$\vec{B}$，有恒等式**
 
 $$
 \| \vec{A} + \vec{B} \|^2 = 
-    \| \vec{A} \|^2 \| \vec{B} \|^2 + 
+    \| \vec{A} \|^2 + \| \vec{B} \|^2 + 
     \vec{A} \cdot \vec{B} + 
     \overline{ \vec{A} \cdot \vec{B} }
 $$
@@ -63,3 +63,46 @@ $$
 }
 $$
 
+**2. 证明：对于$\Bbb C^n$中的任意两个向量$\vec{A}$和$\vec{B}$，$\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}$是实数。**
+
+证：由定义有
+
+$$
+\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}} = \sum^n_{k=1} (a_k \overline{b_k} + \overline{a_k} b_k)
+$$
+
+令$a\_k = x\_{ak} + y\_{ak} \jmath, b\_k = x\_{bk} + y\_{bk} \jmath$，代入上式，即可算得其虚部系数为0，所以上式的结果必然是实数。 
+
+## 复n维空间的夹角问题
+
+为了对夹角公式进行修正，在复n维空间中，两个向量之间的夹角有如下定义：
+
+$$
+\cos \theta = \frac{\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}}{2\|\vec{A}\|\|\vec{B}\|}
+$$
+
+当然，这样定义的原因之一在于，上式右端的值域符合$\cos \theta$的值域，再有则是根据$\Bbb R^n$上的公式$\cos \theta = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\|\|\vec{B}\|}$变形而来，下面简单证明一下值域相等的问题。
+
+由Cauchy-Schwarz不等式有
+
+$$
+| \vec{A} \cdot \vec{B} |^2 \leq (\vec{A} \cdot \vec{A})(\vec{B} \cdot \vec{B})
+$$
+
+对其两端开方，有
+
+$$
+-\|\vec{A}\|\|\vec{B}\| \leq 
+\vec{A} \cdot \vec{B} \leq 
+\|\vec{A}\|\|\vec{B}\|
+$$
+
+同理，有$\vec{B} \cdot \vec{A} = \overline{\vec{A} \cdot \vec{B}}$
+
+$$
+-\|\vec{A}\|\|\vec{B}\| \leq 
+\overline{\vec{A} \cdot \vec{B}} \leq 
+\|\vec{A}\|\|\vec{B}\|
+$$
+
+两式相加即可证得其值域为$\lbrack -1, 1 \rbrack$。
