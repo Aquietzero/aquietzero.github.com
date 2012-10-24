@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Another Fresh Start - Null Space</title>
+  <title>Vector Space of Complex N-tuple - Null Space</title>
   <meta name="author" content="zero">
 
   
-  <meta name="description" content="最近几天空间和域名都过期了，实在不想再续费那些php空间了，也不想再去折腾博客系统，于是就偷懒用Octopress了。其实我也不是对博客系统没有兴趣了，只是需要一个写文章的地方，于是就选择了这里。之前很早就听说过Octopress了，也看到非常非常多的人在用，但一直有自己的空间使得我不想去用， &hellip;">
+  <meta name="description" content="向量空间$\Bbb R^n$实际上可以扩充到复数域，从而推广到复数向量空间$\Bbb C^n$。与$\Bbb R^n$类似，对于$\Bbb C^n$我们有 \vec{A} = \vec{B} \Leftrightarrow i = 1, 2, \cdots, n, a_i = b_i, \\
+\ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://Aquietzero.github.com/blog/2012/08/03/another-fresh-start/">
+  <link rel="canonical" href="http://Aquietzero.github.com/blog/2012/10/23/vector-space-of-complex-n-tuple/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -83,7 +84,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Another Fresh Start</h1>
+      <h1 class="entry-title">Vector Space of Complex N-tuple</h1>
     
     
       <p class="meta">
@@ -99,16 +100,113 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-08-03T23:18:00+08:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+<time datetime="2012-10-23T20:23:00+08:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>最近几天空间和域名都过期了，实在不想再续费那些php空间了，也不想再去折腾博客系统，于是就偷懒用Octopress了。其实我也不是对博客系统没有兴趣了，只是需要一个写文章的地方，于是就选择了这里。之前很早就听说过Octopress了，也看到非常非常多的人在用，但一直有自己的空间使得我不想去用，但实际上我也好久没有更新过空间了，现在空间没有了，心里不实在了，想快点找个能写东西的地方…</p>
+<div class="entry-content"><p>向量空间$\Bbb R^n$实际上可以扩充到复数域，从而推广到复数向量空间$\Bbb C^n$。与$\Bbb R^n$类似，对于$\Bbb C^n$我们有</p>
 
-<p>我不打算把之前的文章搬到这里来了，这里就当作是我一个新的开始吧…</p>
+<script type="math/tex; mode=display">
+\vec{A} = \vec{B} \Leftrightarrow i = 1, 2, \cdots, n, a_i = b_i, \\
+\vec{A} + \vec{B} = (a_1 + b_1, \cdots, a_n + b_n), \\
+c\vec{A} = (ca_1, \cdots, ca_n).
+</script>
+
+<p>其中上面的常量$a_i, b_i, c$都是复数，由此我们得到了<strong>复n维空间</strong>，记为$\Bbb C^n$。</p>
+
+<p>有很多关于$\Bbb R^n$的定理都可以原封不动地移植到$\Bbb C^n$上，不过与点积有关的定理仍需要进行修正，我们用不全为0的实数的平方和为正这一事实来证明非零向量与自己的点积为正，<strong>由于复数的平方和有可能为负，为了保留正定性，我们必须修改点积的定义。</strong></p>
+
+<h2 id="n">复n维空间的点积定义</h2>
+
+<p>设$\vec{A} = (a_1, \cdots, a_n), \vec{B} = (b_1, \cdots, b_n)$为$\Bbb C^n$中的两个向量，我们用如下的公式来定义它们的点积$\vec{A} \cdot \vec{B}$：</p>
+
+<script type="math/tex; mode=display">
+\vec{A} \cdot \vec{B} = \sum^n_{k=1} a_k \overline{b_k} 
+</script>
+
+<p>其中$\overline{b_k}$是$b_k$的共轭复数。</p>
+
+<p>根据这样的定义，就有一些定理需要修正了，比如：</p>
+
+<script type="math/tex; mode=display">
+\vec{A} \cdot \vec{B} = \overline{ \vec{B} \cdot \vec{A} }, \\
+c(\vec{A} \cdot \vec{B}) = (c \vec{A}) \cdot \vec{B} = \vec{A} \cdot (\overline{c} \vec{B}).
+</script>
+
+<p>这些都是显而易见的推广，在此就不证明了。</p>
+
+<h2 id="section">一些例子</h2>
+
+<p><strong>1. 证明：对$\Bbb C^n$中任意两个向量$\vec{A}$和$\vec{B}$，有恒等式</strong></p>
+
+<script type="math/tex; mode=display">
+\| \vec{A} + \vec{B} \|^2 = 
+    \| \vec{A} \|^2 + \| \vec{B} \|^2 + 
+    \vec{A} \cdot \vec{B} + 
+    \overline{ \vec{A} \cdot \vec{B} }
+</script>
+
+<p>证：令$\vec{C} = \vec{A} + \vec{B}$，于是有</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\eqalign{
+    \| \vec{A} + \vec{B} \|^2 
+    &= \|\vec{C}\| \cdot \|\vec{C}\| \\
+    &= \sum^n_{k=1} c_k \overline{c_k} \\
+    &= \sum^n_{k=1} (a_k + b_k)(\overline{a_k} + \overline{b_k}) \\
+    &= \sum^n_{k=1} (a_k \overline{a_k} + a_k \overline{b_k} + b_k \overline{a_k} + b_k \overline{b_k}) \\
+    &= \|\vec{A}\|^2 + \|\vec{B}\|^2 + \vec{A} \cdot \vec{B} + \vec{B} \cdot \vec{A} \\
+    &= \|\vec{A}\|^2 + \|\vec{B}\|^2 + \vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}
+}
+ %]]></script>
+
+<p><strong>2. 证明：对于$\Bbb C^n$中的任意两个向量$\vec{A}$和$\vec{B}$，$\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}$是实数。</strong></p>
+
+<p>证：由定义有</p>
+
+<script type="math/tex; mode=display">
+\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}} = \sum^n_{k=1} (a_k \overline{b_k} + \overline{a_k} b_k)
+</script>
+
+<p>令$a_k = x_{ak} + y_{ak} \jmath, b_k = x_{bk} + y_{bk} \jmath$，代入上式，即可算得其虚部系数为0，所以上式的结果必然是实数。 </p>
+
+<h2 id="n-1">复n维空间的夹角问题</h2>
+
+<p>为了对夹角公式进行修正，在复n维空间中，两个向量之间的夹角有如下定义：</p>
+
+<script type="math/tex; mode=display">
+\cos \theta = \frac{\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}}{2\|\vec{A}\|\|\vec{B}\|}
+</script>
+
+<p>当然，这样定义的原因之一在于，上式右端的值域符合$\cos \theta$的值域，再有则是根据$\Bbb R^n$上的公式$\cos \theta = \frac{\vec{A} \cdot \vec{B}}{|\vec{A}||\vec{B}|}$变形而来，下面简单证明一下值域相等的问题。</p>
+
+<p>由Cauchy-Schwarz不等式有</p>
+
+<script type="math/tex; mode=display">
+| \vec{A} \cdot \vec{B} |^2 \leq (\vec{A} \cdot \vec{A})(\vec{B} \cdot \vec{B})
+</script>
+
+<p>对其两端开方，有</p>
+
+<script type="math/tex; mode=display">
+-\|\vec{A}\|\|\vec{B}\| \leq 
+\vec{A} \cdot \vec{B} \leq 
+\|\vec{A}\|\|\vec{B}\|
+</script>
+
+<p>同理，有$\vec{B} \cdot \vec{A} = \overline{\vec{A} \cdot \vec{B}}$</p>
+
+<script type="math/tex; mode=display">
+-\|\vec{A}\|\|\vec{B}\| \leq 
+\overline{\vec{A} \cdot \vec{B}} \leq 
+\|\vec{A}\|\|\vec{B}\|
+</script>
+
+<p>两式相加即可证得其值域为$\lbrack -1, 1 \rbrack$。</p>
 </div>
 
 
@@ -131,12 +229,12 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-08-03T23:18:00+08:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+<time datetime="2012-10-23T20:23:00+08:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/trivial/'>Trivial</a>
+    <a class='category' href='/blog/categories/math/'>Math</a>
   
 </span>
 
@@ -152,8 +250,8 @@ MathJax.Hub.Config({
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/10/16/an-interesting-probability-problem-n-persons-in-a-circle/" title="Previous Post: An Interesting Probability Problem: N Persons in a Circle">&laquo; An Interesting Probability Problem: N Persons in a Circle</a>
       
-        <a class="basic-alignment right" href="/blog/2012/08/06/dual-monitors-in-ubuntu/" title="Next Post: Dual Monitors in Ubuntu">Dual Monitors in Ubuntu &raquo;</a>
       
     </p>
   </footer>
@@ -267,8 +365,8 @@ MathJax.Hub.Config({
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://Aquietzero.github.com/blog/2012/08/03/another-fresh-start/';
-        var disqus_url = 'http://Aquietzero.github.com/blog/2012/08/03/another-fresh-start/';
+        var disqus_identifier = 'http://Aquietzero.github.com/blog/2012/10/23/vector-space-of-complex-n-tuple/';
+        var disqus_url = 'http://Aquietzero.github.com/blog/2012/10/23/vector-space-of-complex-n-tuple/';
         var disqus_script = 'embed.js';
       
     (function () {
