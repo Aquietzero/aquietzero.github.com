@@ -4,7 +4,7 @@
   <title><![CDATA[Null Space]]></title>
   <link href="http://Aquietzero.github.com/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-10-24T11:25:27+08:00</updated>
+  <updated>2012-10-25T11:00:16+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -250,7 +250,7 @@ f(n) =
 <script type="math/tex; mode=display">% &lt;![CDATA[
 
 \begin{align}
-    \int_x^{\infty} x^n e^{-x} \mathrm{d}x 
+    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
         &= \lim_{x \to \infty} -x^n e^{-x} - n \int_0^{\infty} x^{n-1} e^{-x} \mathrm{d}x \\
         &= nF(n - 1)
 \end{align}
@@ -261,8 +261,8 @@ f(n) =
 <script type="math/tex; mode=display">% &lt;![CDATA[
 
 \begin{align}
-    \int_x^{\infty} x^n e^{-x} \mathrm{d}x 
-        &= \int_x^{\infty} e^{-x} \mathrm{d}x \\
+    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
+        &= \int_0^{\infty} e^{-x} \mathrm{d}x \\
         &= -\lim_{x \to \infty} e^{-x} + e^0 = 1
 \end{align}
  %]]&gt;</script>
@@ -290,7 +290,7 @@ f(n) =
 <script type="math/tex; mode=display">% &lt;![CDATA[
 
 \begin{align}
-    \int_x^{\infty} \sqrt{x} e^{-x} \mathrm{d}x 
+    \int_0^{\infty} \sqrt{x} e^{-x} \mathrm{d}x 
         &= 2 \int_0^{\infty} y^2 e^{-y^2} \mathrm{d}y \\ 
         &= -\lim_{y \to \infty} y e^{-y^2} - \int_0^{\infty} e^{-y^2} \mathrm{d}y \\
         &= \frac{\sqrt{\pi}}{2}

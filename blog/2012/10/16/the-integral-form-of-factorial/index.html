@@ -144,7 +144,7 @@ f(n) =
 <script type="math/tex; mode=display">% <![CDATA[
 
 \begin{align}
-    \int_x^{\infty} x^n e^{-x} \mathrm{d}x 
+    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
         &= \lim_{x \to \infty} -x^n e^{-x} - n \int_0^{\infty} x^{n-1} e^{-x} \mathrm{d}x \\
         &= nF(n - 1)
 \end{align}
@@ -155,8 +155,8 @@ f(n) =
 <script type="math/tex; mode=display">% <![CDATA[
 
 \begin{align}
-    \int_x^{\infty} x^n e^{-x} \mathrm{d}x 
-        &= \int_x^{\infty} e^{-x} \mathrm{d}x \\
+    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
+        &= \int_0^{\infty} e^{-x} \mathrm{d}x \\
         &= -\lim_{x \to \infty} e^{-x} + e^0 = 1
 \end{align}
  %]]></script>
@@ -184,7 +184,7 @@ f(n) =
 <script type="math/tex; mode=display">% <![CDATA[
 
 \begin{align}
-    \int_x^{\infty} \sqrt{x} e^{-x} \mathrm{d}x 
+    \int_0^{\infty} \sqrt{x} e^{-x} \mathrm{d}x 
         &= 2 \int_0^{\infty} y^2 e^{-y^2} \mathrm{d}y \\ 
         &= -\lim_{y \to \infty} y e^{-y^2} - \int_0^{\infty} e^{-y^2} \mathrm{d}y \\
         &= \frac{\sqrt{\pi}}{2}
