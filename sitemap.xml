@@ -60,11 +60,17 @@
     </url>
     <url>
         <loc>http://Aquietzero.github.com/blog/2012/10/23/vector-space-of-complex-n-tuple/</loc>
-        <lastmod>2012-10-24T11:24:59+08:00</lastmod>
+        <lastmod>2012-10-29T13:40:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://Aquietzero.github.com/blog/2012/10/29/an-old-method-to-calculate-the-area-of-a-triangle/
+        </loc>
+        <lastmod>2012-10-29T13:51:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://Aquietzero.github.com/blog/archives/</loc>
-        <lastmod>2012-10-25T11:00:00+08:00</lastmod>
+        <lastmod>2012-10-29T13:51:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://Aquietzero.github.com/about/</loc>
@@ -72,6 +78,6 @@
     </url>
     <url>
         <loc>http://Aquietzero.github.com/</loc>
-        <lastmod>2012-10-25T11:00:00+08:00</lastmod>
+        <lastmod>2012-10-29T13:51:05+08:00</lastmod>
     </url>
 </urlset>

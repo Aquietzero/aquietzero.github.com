@@ -9,8 +9,7 @@
   <meta name="author" content="zero">
 
   
-  <meta name="description" content="向量空间$\Bbb R^n$实际上可以扩充到复数域，从而推广到复数向量空间$\Bbb C^n$。与$\Bbb R^n$类似，对于$\Bbb C^n$我们有 \vec{A} = \vec{B} \Leftrightarrow i = 1, 2, \cdots, n, a_i = b_i, \\
-\ &hellip;">
+  <meta name="description" content="之前在高中的时候总结三角形面积公式的时候，碰到一个看上去比较神奇的公式： S = \sqrt{ s(s - a)(s - b)(s - c) } 其中$a, b, c$分别为三角形三边边长： s = \frac{1}{2}(a + b + c) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +80,102 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/29/an-old-method-to-calculate-the-area-of-a-triangle/">An Old Method to Calculate the Area of a Triangle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-29T13:19:00+08:00" pubdate data-updated="true">Oct 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>之前在高中的时候总结三角形面积公式的时候，碰到一个看上去比较神奇的公式：</p>
+
+<script type="math/tex; mode=display">
+S = \sqrt{ s(s - a)(s - b)(s - c) }
+</script>
+
+<p>其中$a, b, c$分别为三角形三边边长：</p>
+
+<script type="math/tex; mode=display">
+s = \frac{1}{2}(a + b + c)
+</script>
+
+<p>当时之所以觉得神奇是因为这个公式完全不需要三角形的角度信息，实际上三条边的长度已知就完全可以确定一个三角形，也可以通过这些边的长度来反推角度的信息，但是必要不大，因为有更为简便的方式来用这些边的长度来直接算出三角形的面积，即上面给出的公式。高中的时候只是觉得很神奇，却没有想这条公式是如何得到的，前天看书的时候再次碰到这条公式，想了一下，有下面的推导过程。</p>
+
+<p>先重复描述一下问题：</p>
+
+<blockquote>
+  <p>有三角形$\triangle OAB$，其中三边长度分别为$OA = a, OB = b, AB = c$，求证其面积可以表示为$\sqrt{s(s - a)(s - b)(s - c)}$，其中$s = \frac{1}{2}(a + b + c)$。</p>
+</blockquote>
+
+<p>要在没有角度信息的情况下求出三角形面积，首先想到的是用向量方法。由于两向量$\vec{A}, \vec{B}$叉乘的结果是一个与这两个向量都垂直的向量，并且其值为由这两个向量确定的平行四边形的面积。而由这两个向量所确定的三角形的面积刚好是平行四边型面积的一半，仅此，我们有：</p>
+
+<script type="math/tex; mode=display">
+S_{\triangle{OAB}} = S = \frac{1}{2}\|\vec{A} \times \vec{B}\|
+</script>
+
+<p>根据Lagrange公式($|\vec{A} \times \vec{B}|^2 = |\vec{A}|^2 + |\vec{B}|^2 - (A \cdot B)^2$)，令$\vec{A} = \vec{OA}$以及$\vec{B} = \vec{OB}$，有</p>
+
+<script type="math/tex; mode=display">
+(2S)^2 = a^2 b^2 - (\vec{A} \cdot \vec{B})^2
+</script>
+
+<p>同时，根据余弦定理，又有：</p>
+
+<script type="math/tex; mode=display">
+c^2 = a^2 + b^2 - 2\vec{A} \cdot \vec{B}
+</script>
+
+<p>两式消去点乘项$\vec{A} \cdot \vec{B}$，有：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\eqalign{
+    4S^2 
+    &= a^2 b^2 - \frac{1}{4}(a^2 + b^2 - c^2)^2 \\
+    &= \lbrack ab + \frac{1}{2}(c^2 - a^2 - b^2) \rbrack \lbrack ab - \frac{1}{2}(c^2 - a^2 - b^2) \rbrack \\
+    &= \frac{1}{4} (2ab + c^2 - a^2 - b^2)(2ab - c^2 + a^2 + b^2)
+}
+ %]]></script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\eqalign{
+    S^2
+    &= \frac{1}{16} (2ab + c^2 - a^2 - b^2)(2ab - c^2 + a^2 + b^2) \\
+    &= \frac{1}{16} (c^2 - (a - b)^2)((a + b)^2 - c^2) \\
+    &= \frac{1}{16} (c + a - b)(c - a + b)(a + b + c)(a + b - c)
+}
+ %]]></script>
+
+<p>令$s = \frac{1}{2} (a + b + c)$代入上式，即得证。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -931,240 +1026,6 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/11/on-nodejs-modules/">On NodeJs Modules</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-11T10:18:00+08:00" pubdate data-updated="true">Sep 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>对于Node的初学者来说，可能对模块化方面比较模糊，网上的资料比较分散，在此总结一下。</p>
-
-<h2 id="require--exports">require 和 exports</h2>
-
-<p>个人感觉客户端js的最大缺点就是模块化难，原因有二：</p>
-
-<ol>
-  <li>JavaScript没有类的概念，虽然可以用一些方法来模拟类，但是远没有直接用<code>class</code>定义来得直接，针对这个缺点，可以用<strong>CoffeeScript</strong>来替代，但在下一篇文章会说说如何用JavaScript来模拟类。</li>
-  <li>JavaScript没有包含文件的功能，这就导致了必须自己来组织文件的顺序，从而在<code>index.html</code>里面按顺序把包含的<code>.js</code>文件一一列出。当然还有其他的方式，但是原理还是如此。使用工具的话推荐<a href="https://github.com/jrburke/requirejs">RequireJs</a>以及<a href="https://github.com/substack/node-browserify">browserify</a>，但使用起来依然不是那么方便。</li>
-</ol>
-
-<p>为此，在Node里面就方便很多了，其默认将各个文件看作是各个独立的<strong>Module</strong>，即在一个文件里面定义的变量，函数都不为其他文件所见，下面举个简单的例子。比如在文件<code>add.js</code>如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">file_name</span> <span class="o">=</span> <span class="s1">&#39;add.js&#39;</span><span class="p">;</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>那么在别的文件是不能访问<code>file_name</code>这个变量以及<code>add</code>这个函数的，如果要在别的文件里面使用它们，那么就必须先把它们<strong>暴露</strong>到这一个文件模块的外部，可以用如下的方式：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">file_name</span> <span class="o">=</span> <span class="s1">&#39;add.js&#39;</span><span class="p">;</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">file_name</span> <span class="o">=</span> <span class="nx">file_name</span><span class="p">;</span>
-</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>这样，我们就可以在别的文件使用这些变量了，在<code>use.js</code>里面使用方式如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// use.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add_file</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./add&#39;</span><span class="p">);</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add_file</span><span class="p">.</span><span class="nx">file_name</span><span class="p">);</span> <span class="c1">// output =&gt; add.js</span>
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add_file</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt; 7</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>由此可以看出，在<code>add.js</code>里面，我们把需要暴露的变量绑定到<code>exports</code>对象上面，然后真正返回出去的实际上是<code>exports</code>对象，在<code>use.js</code>里面调用<code>require</code>语句的时候，返回出来的<code>exports</code>对象被<code>add_file</code>变量接住了，所以就可以使用那些本来绑定在<code>exports</code>对象上面的变量了。</p>
-
-<h2 id="exports--moduleexports">exports 和 module.exports</h2>
-
-<p>既然<code>exports</code>是这样的一个对象，那么我们也可以这样进行绑定，比如<code>person.js</code>如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// person.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-</span><span class="line">    <span class="k">this</span><span class="p">.</span><span class="nx">age</span>  <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class="line">    <span class="nx">introduce</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class="line">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
-</span><span class="line">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="s1">&#39; years old.&#39;</span><span class="p">);</span>
-</span><span class="line">    <span class="p">}</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">;</span>
-</span><span class="line"><span class="c1">// exports = Person; DOES NOT WORK!</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>然后在<code>class.js</code>里面调用：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// class.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./person&#39;</span><span class="p">);</span>
-</span><span class="line">
-</span><span class="line"><span class="kd">var</span> <span class="kr">class</span> <span class="o">=</span> <span class="p">[</span>
-</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span>  <span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
-</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Jim&#39;</span>  <span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
-</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Mary&#39;</span> <span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-</span><span class="line"><span class="p">];</span>
-</span><span class="line">
-</span><span class="line"><span class="kr">class</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="nx">person</span><span class="p">.</span><span class="nx">introduce</span><span class="p">();</span>
-</span><span class="line"><span class="p">});</span>
-</span><span class="line">
-</span><span class="line"><span class="cm">/**</span>
-</span><span class="line"><span class="cm"> * output:</span>
-</span><span class="line"><span class="cm"> * I am Tom. I am 13 years old.</span>
-</span><span class="line"><span class="cm"> * I am Jim. I am 12 years old.</span>
-</span><span class="line"><span class="cm"> * I am Han meimei. I am 13 years old.</span>
-</span><span class="line"><span class="cm"> */</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>可以看出，这个时候把<code>Person</code>作为整个模块的输出，那么<code>exports</code>和<code>module.exports</code>有什么区别呢？<strong>实际上，<code>exports</code>只是<code>module.exports</code>的一个helper，<code>exports</code>的作用在于收集需要暴露的变量，并将其包装为一个对象交给<code>module.exports</code>进行输出，所以<code>exports = Person</code>没有任何效果，<code>Person</code>没有绑定到<code>exports</code>。</strong>既然这样，写的时候就必须注意了，因为<code>exports</code>最后会交给<code>module.exports</code>进行输出，所以如果这两者同时存在，绑定到<code>exports</code>的变量会被<code>module.exports</code>的值所覆盖，即：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">;</span>
-</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">something</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">// `something` is blocked.</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h2 id="section">模块化组织</h2>
-
-<p>明白了上面所说的以后，进行模块化组织就很方便了，看看如下的文件结构：</p>
-
-<pre><code>└─┬─ lib
-  │   ├── add.js
-  │   ├── sub.js
-  │   └── math.js
-  └─ use.js
-</code></pre>
-
-<p>个文件如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-<span class="line-number">21</span>
-<span class="line-number">22</span>
-<span class="line-number">23</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
-</span><span class="line">
-</span><span class="line"><span class="c1">// sub.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">sub</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
-</span><span class="line">
-</span><span class="line"><span class="c1">// math.js</span>
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class="line">    <span class="nx">add</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./add&#39;</span><span class="p">),</span>
-</span><span class="line">    <span class="nx">sub</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./sub&#39;</span><span class="p">),</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="c1">// use.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">math</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./lib/math&#39;</span><span class="p">);</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt;  7</span>
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt; -1 </span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1180,6 +1041,10 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/29/an-old-method-to-calculate-the-area-of-a-triangle/">An Old Method to Calculate the Area of A Triangle</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/23/vector-space-of-complex-n-tuple/">Vector Space of Complex N-tuple</a>
       </li>
     
@@ -1193,10 +1058,6 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
     
       <li class="post">
         <a href="/blog/2012/10/16/adding-mathjax-support-to-octopress/">Adding MathJax Support to Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/10/goodbye/">Goodbye, UC</a>
       </li>
     
   </ul>
@@ -1237,7 +1098,7 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
     <li class='category'><a href='/blog/categories/express/'>Express (1)</a></li>
 <li class='category'><a href='/blog/categories/french/'>French (2)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/math/'>Math (3)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (4)</a></li>
 <li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
 <li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
