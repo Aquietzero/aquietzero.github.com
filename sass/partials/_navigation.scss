@@ -1,5 +1,10 @@
 body > nav {
-  position: relative;
+  // position: relative;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 1100px;
+  box-shadow: 0 0 10px #bbb;
   background-color: $nav-bg;
   @include background($nav-bg-front, $nav-bg-back);
   border: {
