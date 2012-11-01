@@ -1,5 +1,6 @@
 $noise-bg: image-url('noise.png') top left !default;
 $img-border: inline-image('dotted-border.png');
+$pheonix: image-url('pheonix.png') top left !default;
 
 // Main Link Colors
 $link-color: lighten(#165b94, 3) !default;
@@ -8,23 +9,32 @@ $link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !defaul
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
 // Main Section Colors
-$main-bg: #f8f8f8 !default;
-$page-bg: #252525 !default;
-$article-border: #eeeeee !default;
+// $main-bg: #f8f8f8 !default;
+// $page-bg: #252525 !default;
+// $article-border: #eeeeee !default;
+$main-bg: rgba(0, 0, 0, 0) !default;
+$page-bg: white !default;
+$article-border: white !default;
 
-$header-bg: #333 !default;
-$header-border: lighten($header-bg, 15) !default;
-$title-color: #f2f2f2 !default;
-$subtitle-color: #aaa !default;
+// $header-bg: #333 !default;
+// $header-border: lighten($header-bg, 15) !default;
+// $title-color: #f2f2f2 !default;
+// $subtitle-color: #aaa !default;
+$header-bg: rgba(100, 100, 100, 0) !default;
+$header-border: none !default;
+$title-color: black !default;
+$subtitle-color: #666 !default;
 
 $text-color: #222 !default;
 $text-color-light: #aaa !default;
 $type-border: #ddd !default;
 
 /* Navigation */
-$nav-bg: #ccc !default;
+// $nav-bg: #ccc !default;
+$nav-bg: white !default;
 $nav-bg-front: image-url('noise.png') !default;
-$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11)) !default;
+// $nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11)) !default;
+$nav-bg-back: white !default;
 $nav-color: darken($nav-bg, 38) !default;
 $nav-color-hover: darken($nav-color, 25) !default;
 $nav-placeholder: desaturate(darken($nav-bg, 10), 15) !default;
@@ -35,24 +45,30 @@ $nav-border-left: darken($nav-bg, 11) !default;
 $nav-border-right: lighten($nav-bg, 7) !default;
 
 /* Sidebar colors */
-$sidebar-bg: #f2f2f2 !default;
+// $sidebar-bg: #f2f2f2 !default;
+$sidebar-bg: rgba(100, 100, 100, 0) !default;
 $sidebar-link-color: $link-color !default;
 $sidebar-link-color-hover: $link-color-hover !default;
 $sidebar-link-color-active: $link-color-active !default;
 $sidebar-color: change-color(mix($text-color, $sidebar-bg, 80), $hue: hue($sidebar-bg), $saturation: saturation($sidebar-bg)/2) !default;
-$sidebar-border: desaturate(darken($sidebar-bg, 7), 10) !default;
+// $sidebar-border: desaturate(darken($sidebar-bg, 7), 10) !default;
+$sidebar-border: #ddd !default;
 $sidebar-border-hover: darken($sidebar-bg, 7) !default;
 $sidebar-link-color-subdued: lighten($sidebar-color, 20) !default;
 $sidebar-link-color-subdued-hover: $sidebar-link-color-hover !default;
 $twitter-status-link: lighten($sidebar-link-color-subdued, 15) !default;
 
-$footer-color: #888 !default;
-$footer-bg: #ccc !default;
+// $footer-color: #888 !default;
+// $footer-bg: #ccc !default;
+$footer-color: #666 !default;
+$footer-bg: white !default;
 $footer-bg-front: image-url('noise.png') !default;
-$footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11)) !default;
+// $footer-bg-back: linear-gradient(lighten($footer-bg, 8), $footer-bg, darken($footer-bg, 11)) !default;
+$footer-bg-back: white !default;
 $footer-color: darken($footer-bg, 38) !default;
 $footer-color-hover: darken($footer-color, 10) !default;
-$footer-border-top: lighten($footer-bg, 15) !default;
+// $footer-border-top: lighten($footer-bg, 15) !default;
+$footer-border-top: #bbb !default;
 $footer-border-bottom: darken($footer-bg, 15) !default;
 $footer-link-color: darken($footer-bg, 38) !default;
 $footer-link-color-hover: darken($footer-color, 25) !default;
@@ -72,14 +88,16 @@ a {
 }
 
 html {
-  background: $page-bg image-url('line-tile.png') top left;
+  // background: $page-bg image-url('line-tile.png') top left;
+  background: $page-bg image-url('pheonix.png') top left no-repeat;
 }
 body {
   > div#main {
     background: $sidebar-bg $noise-bg;
     border-bottom: 1px solid $page-border-bottom;
     > div {
-      background: $main-bg $noise-bg;
+      // background: $main-bg $noise-bg;
+      background: $main-bg;
       border-right: 1px solid $sidebar-border;
     }
   }
