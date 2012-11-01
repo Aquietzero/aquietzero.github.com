@@ -1,6 +1,7 @@
 $noise-bg: image-url('noise.png') top left !default;
 $img-border: inline-image('dotted-border.png');
-$pheonix: image-url('pheonix.png') top left !default;
+$pheonix: image-url('pheonix.png') top left no-repeat !default;
+$formula: image-url('formula.png') bottom right no-repeat fixed !default;
 
 // Main Link Colors
 $link-color: lighten(#165b94, 3) !default;
@@ -89,11 +90,11 @@ a {
 
 html {
   // background: $page-bg image-url('line-tile.png') top left;
-  background: $page-bg image-url('pheonix.png') top left no-repeat;
+  background: $page-bg $pheonix;
 }
 body {
   > div#main {
-    background: $sidebar-bg $noise-bg;
+    background: $sidebar-bg $formula;
     border-bottom: 1px solid $page-border-bottom;
     > div {
       // background: $main-bg $noise-bg;
