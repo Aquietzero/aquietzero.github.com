@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Math | Null Space]]></title>
   <link href="http://Aquietzero.github.com/blog/categories/math/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-11-03T10:57:45+08:00</updated>
+  <updated>2012-11-05T00:30:48+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -12,6 +12,105 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linear Space and Euclidean Space]]></title>
+    <link href="http://Aquietzero.github.com/blog/2012/11/03/linear-space-and-euclidean-space/"/>
+    <updated>2012-11-03T20:49:00+08:00</updated>
+    <id>http://Aquietzero.github.com/blog/2012/11/03/linear-space-and-euclidean-space</id>
+    <content type="html"><![CDATA[<p>最近看到线性空间相关的内容，才发现以前好像就没理解过线性空间，做题也好像仅仅是套公式，做步骤。大一的时候大家都说线性代数比较抽象，难以理解，我感觉那是因为大家没有理解空间(space)这个概念，我也不能说自己就理解了，但是在线性代数里面，某些定理或者定义的描述确实与我们平常所接触到的高等数学不一样的。</p>
+
+<h2 id="section">公理化方法</h2>
+
+<p>百度百科上的定义如下：</p>
+
+<blockquote>
+  <p>公理化方法，就是指从尽可能少的原始概念和不加证明的原始命题(即公理、公设)出发，按照逻辑规则推导出其他命题，建立起一个演绎系统的方法。</p>
+</blockquote>
+
+<p>通过公理化方法所定义的概念毫无疑问是非常抽象的，因为它不加证明地为某个系统，某个域描述了一组“特性”，而且是一组<strong>基本特性</strong>。而人们认识事物的过程一般是通过认识了解事物外在的诸多特性来抽象出简洁的对事物的理解，这是抽象的过程。然而，如果直接给出事物内在抽象的根本的特性，你很难在短时间内建立起对这个事物的全方位的理解。当然，这里所说的<strong>事物</strong>实际上本身就是抽象的，我认为要通过简单的本质的描述来认识这样的事物有两种方法：</p>
+
+<ol>
+  <li>通过接触足够的实例(或者实体)来认识该抽象事物。</li>
+  <li>通过那抽象事物的已知的本质特性来推导出它更多的外在特性。</li>
+</ol>
+
+<p>这两种方法各有优劣，而一般的教科书都是两种方法结合使用。先是通过公理化方法描述一个抽象的概念，然后通过一系列的例子来说明该抽象概念的本质特性(公理)，接着就慢慢地通过这些本质特性推出更多的外在性质(定理，推论)。我觉得这种方法对于高层次的读者来说无疑是很合理的，但是如果读者本身对公理化定义的抽象概念完全不理解，那么再多的例子也是徒劳。</p>
+
+<h2 id="section-1">线性空间</h2>
+
+<p>我尝试以另一种方式来阐述线性空间的概念。其实能说的角度也是有限的，我也只能尽力而为。</p>
+
+<p>在说线性空间之前，我觉得有必要说说向量空间。因为我们以前的教科书《Linear Algebra and Its Applications》(David C. Lay)确实使我将两者等同了，后来看了别的书以后，我就对这本书深恶痛极。本来拿我们熟悉的向量空间来做例子是最合适不过的，但是在书的中部说线性空间的时候，并没有将这两者明确分开，个人感觉有点不负责任。</p>
+
+<p>首先看看这个向量空间是什么。个人觉得，这个空间可以理解为<strong>集合</strong>，向量空间就是向量的集合，所有的向量组成的集合就是向量空间。即全体实$n$元组所组成的集合就是$\Bbb R^n$，在这个向量空间上还定义了一堆的运算：向量加法，向量减法，向量数乘，点乘等等。注意，在这些运算定义的时候是这样表述的：</p>
+
+<blockquote>
+  <p>设$A = (a_1, a_2, \cdots, a_n)$以及$B = (b_1, b_2, \cdots, b_n)$是$\Bbb R^n$中的元素，$c \in \Bbb R$定义 
+$$ 
+cA = (ca_1, ca_2, \cdots, ca_n), \quad <br />
+A + B = (a_1 + b_1, a_2 + b_2, \cdots, a_n + b_n)
+$$</p>
+</blockquote>
+
+<p>其余的运算都是以类似的方式来进行公式定义。可以说向量空间只是线性空间的一个特例，可以看看如下线性空间的定义，以作对比：</p>
+
+<blockquote>
+  <p>令$V$表示已知对象的非空集合，我们称这些对象为<strong>元素</strong>。当集合$V$满足以下十条公理时，我们称其为<strong>线性空间</strong>。<br />
+<br /> <strong>1. (对加法封闭)</strong> 对$V$中任意两个元素$x$和$y$，都有$V$中唯一元素与它们对应，这个元素称为$x$和$y$的和，记作$x+y$。
+<br /> <strong>2. (对实数乘法封闭)</strong> 对$V$中任意元素$x$和任意实数$a$，都有$V$中唯一元素与它们对应，这个元素称为$x$和$a$的积，记作$ax$。
+<br /> <strong>3. (加法交换律)</strong> 对$V$中任意元素$x$和$y$，我们都有$x+y=y+x$。
+<br /> <strong>4. (加法结合律)</strong> 对$V$中任意元素$x,y,z$，我们都有$(x+y)+z=x+(y+z)$。
+<br /> <strong>5. (零元的存在性)</strong> 在$V$中存在唯一的元素$O$，使得对$V$中的任意$x$，有$x+O=x$。
+<br /> <strong>6. (负元的存在性)</strong> 在$V$中任意$x$，元素$(-1)$有性质$x+(-1)x=O$。
+<br /> <strong>7. (乘法交换律)</strong> 对$V$中任意元素$x$和任意实数$a$和$b$，我们都有$a(bx)=(ab)x$。
+<br /> <strong>8. (对$V$中加法的分配律)</strong> 对$V$中任意元素$x,y$以及任意实数$a$，我们都有$a(x+y)=ax+ay$。
+<br /> <strong>9. (对实数加法的分配律)</strong> 对$V$中任意元素$x$以及任意实数$a,b$，我们都有$(a+b)x=ax+bx$。
+<br /> <strong>10. (单位元的存在性)</strong> 在$V$中任意$x$，我们有$1x=x$。</p>
+</blockquote>
+
+<p>可以看出两者定义的差异性，前者是用公式进行定义，后者是采用公理化方法进行定义。以上十条公理即使对线性空间的描述，就是说，只要满足了上述公理的空间都可以称为线性空间，<strong>这意味着元素是什么根本不是关键，而是元素在这个空间里面的行为。</strong>其线性性主要体现在对加法和数乘的规定上，可以注意到，上面的公理并没有指出两个线性空间的元素的乘积应该满足什么行为。考虑向量空间，两个向量的乘积有两种形式：点乘还有叉乘，前者的结果是一个实数，而后者则是一个向量。这意味着，空间对于这样的计算并没有封闭性。而线性空间是一个封闭的空间，所以并没有关于这类计算的公理。再有，由于这样的“乘法”定义并不唯一，将其作为公理，即这个空间的基石，也是不妥的。</p>
+
+<p>既然线性空间是用公理化的方式来定义，那么其元素的性质可以说是完全没有限制的，只要它们的加法和数乘运算符合上述规则，那么它们所组成的空间就为线性空间。这样，定义或者判定线性空间要注意以下方面：</p>
+
+<ul>
+  <li>空间里面的元素。</li>
+  <li>定义在这些元素上的加法。</li>
+  <li>定义在这些元素和实数上的数乘。</li>
+  <li>是否满足十条公理。</li>
+</ul>
+
+<p>这样，我们当即可以举出一些实例，例如$(\Bbb R,+, \times)$，这是我们最熟悉的实数空间，加法是实数加法，数乘是实数乘法。其实感觉我正是用教科书上的顺序来讲述…</p>
+
+<h2 id="section-2">函数空间</h2>
+
+<p>既然元素的类型没有限制，那就是说，我们完全可以用函数来作为元素，这就是线性空间的抽象性所带来的好处。根据上面所说的四要素，我们一步一步地定义函数空间。</p>
+
+<ol>
+  <li>函数就是这个空间里面的元素。</li>
+  <li>函数之间的加法可以定义为：$(f+g)(x) = f(x) + g(x)$，其中$x$为$f$和$g$定义域的交集中的任意实数。</li>
+  <li>函数的数乘可以定义为：$(af)(x) = af(x)$，其中$a$为实数。</li>
+</ol>
+
+<p>这样，我们就得到了空间$(f, +, \cdot)$。接下来就是要验证这个空间是否满足上面的十大公理。当然，这就得结合具体的函数族来进行验证了。由于教科书上都有很多例子，例如多项式，满足条件$f(1)=0$的函数等，这里就不再详述了。</p>
+
+<h2 id="section-3">欧氏空间</h2>
+
+<p>说起Euclid，其最大贡献要算是几何方面的了。向量空间可以说是欧几里得几何的解释模型，而$\Bbb R^n$也可以被称为<strong>欧氏空间</strong>。这样，平常所描述的线段的长度，线段之间的夹角都可以用向量空间里面定义的范数以及夹角来替代，这样在几何方面的演算就可以完全通过向量空间里面的运算来代替了。</p>
+
+<p>既然我们已经把向量空间抽象为更高层次的线性空间了，但是在线性空间里面并没有相应于向量空间里面的范数，夹角等定义，那么我们怎么在线性空间里面进行那些有用的类几何演算(比如投影，正交之类)呢？</p>
+
+<p>于是为了解决这样的问题很简单，只需要添加新的规则就好了。于是就有如下定义：</p>
+
+<blockquote>
+  <p>赋予了一个正定对称双线性型的实线性空间$V$称为欧氏空间。</p>
+</blockquote>
+
+<p>当然，这是一个极为抽象的简短的概括的定义。我之所以用这个定义，正是因为它够抽象。先除去那些“正定”，“对称”，“双线性型”等字眼，我们可以看出欧氏空间仅仅比线性空间多了一点点的东西，那就是我们前面所说的，基于线性空间元素之间的运算。我们可以抽象地将这种运算表示为$(x, y)$，其中$x$和$y$都是$V$里面的元素。这样，只要在线性空间上定义了这种运算，就可以得到一个欧氏空间。而这种运算必须满足<strong>正定</strong>，<strong>对称</strong>两种性质，而且这是一个<strong>双线性型</strong>。对于这三者的含义在此就不详述了，因为这里不是教科书，这些分解只是为了方便理解线性空间与欧氏空间的区别及联系罢了。</p>
+
+<p>稍微总结一下，定义这样的运算的目的在于：在通常意义的欧氏几何中，几何图形的依赖于线段长度和直线间夹角的性质称为<strong>度量性质</strong>，在研究$\Bbb R^n$时，我们用了点积定义了长度和夹角，现在我们希望将这些概念推广到更一般的线性空间中去，为此我们将添加了这样定义运算的线性空间为欧氏空间，其命名的原因也可想而知。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The definition of irrational]]></title>
@@ -317,102 +416,6 @@ P
 <p>可以看出最后的概率是跟r一点关系都没有的，乍一看有点神奇，其实认真想想，还有一个 更为简便的方法来解决这个问题。这个问题的第二问可以转化为：B出现在从A数起的第r+1个位置的概率。</p>
 
 <p>由于大家排成一个圈，所以A的位置并不重要，但是B必须和A相隔r个人，而这个位置是确定的，那就相当与要在$n-1$个位置里面挑一个，那当然，挑中这个位置的概率就是$1/(n-1)$了。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Integral Form of Factorial]]></title>
-    <link href="http://Aquietzero.github.com/blog/2012/10/16/the-integral-form-of-factorial/"/>
-    <updated>2012-10-16T11:36:00+08:00</updated>
-    <id>http://Aquietzero.github.com/blog/2012/10/16/the-integral-form-of-factorial</id>
-    <content type="html"><![CDATA[<p>最近在复习概率，在看到Stirling公式的时候，顺便看到了阶乘的积分形式，在此记录一下。</p>
-
-<h2 id="section">阶乘定义</h2>
-
-<p>我们最初接触阶乘的时候估计是使用如下定义：</p>
-
-<script type="math/tex; mode=display">% &lt;![CDATA[
-
-f(n) =
-\begin{cases}
-    0         & , n = 0 \\
-    nf(n - 1) & , n > 0 \\
-\end{cases}
- %]]&gt;</script>
-
-<h2 id="section-1">阶乘积分定义</h2>
-
-<p>如果要寻找该公式对应的积分，那必须满足一下的条件（假设该积分为$F(n)$）：</p>
-
-<ol>
-  <li>当$n = 0$，$F(n) = 0! = 1$。</li>
-  <li>当$n \in \Bbb Z$，$F(n) = n!$。</li>
-  <li>当$n \notin \Bbb Z$，有$(\lfloor n \rfloor - 1)! &lt; F(n) &lt; \lceil n \rceil !$。</li>
-</ol>
-
-<p>为了满足上述条件，考虑下面的函数：</p>
-
-<script type="math/tex; mode=display">
-    F(n) = \int_x^{\infty} x^n e^{-x} \mathrm{d}x
-</script>
-
-<p>用分部积分，有：</p>
-
-<script type="math/tex; mode=display">% &lt;![CDATA[
-
-\begin{align}
-    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
-        &= \lim_{x \to \infty} -x^n e^{-x} - n \int_0^{\infty} x^{n-1} e^{-x} \mathrm{d}x \\
-        &= nF(n - 1)
-\end{align}
- %]]&gt;</script>
-
-<p>由此满足了其递归的定义，既然满足了递归的定义，那么当$n \in \Bbb Z$的时候，必然满足上面的条件2。根据函数图像，条件3也能够验证。对于第一点条件，有当$n = 0$的时候，我们有</p>
-
-<script type="math/tex; mode=display">% &lt;![CDATA[
-
-\begin{align}
-    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
-        &= \int_0^{\infty} e^{-x} \mathrm{d}x \\
-        &= -\lim_{x \to \infty} e^{-x} + e^0 = 1
-\end{align}
- %]]&gt;</script>
-
-<p>所以上述定义的函数$F(n)$确实是可以作为阶乘的积分定义的。</p>
-
-<h2 id="section-2">非整数阶乘</h2>
-
-<p>有了阶乘的积分定义以后，计算阶乘的时候就没有必要要求是整数了。比如计算$4.5!$，根据其阶乘的递归定义，我们有</p>
-
-<script type="math/tex; mode=display">% &lt;![CDATA[
-
-\begin{align}
-4.5! 
-    &= 4.5 \times F(4.5 - 1) \\
-    &= 4.5 \times 3.5 \times F(3.5 - 1) \\
-    &= 4.5 \times 3.5 \times 2.5 \times F(2.5 - 1) \\
-    &= 4.5 \times 3.5 \times 2.5 \times 1.5 \times F(1.5 - 1) \\
-    &= 4.5 \times 3.5 \times 2.5 \times 1.5 \times F(0.5)
-\end{align}
- %]]&gt;</script>
-
-<p>于是我们需要计算的就仅仅只有最后一项$F(0.5)$了。将其代入积分，同样使用分部积分法，我们有：</p>
-
-<script type="math/tex; mode=display">% &lt;![CDATA[
-
-\begin{align}
-    \int_0^{\infty} \sqrt{x} e^{-x} \mathrm{d}x 
-        &= 2 \int_0^{\infty} y^2 e^{-y^2} \mathrm{d}y \\ 
-        &= -\lim_{y \to \infty} y e^{-y^2} - \int_0^{\infty} e^{-y^2} \mathrm{d}y \\
-        &= \frac{\sqrt{\pi}}{2}
-\end{align}
- %]]&gt;</script>
-
-<p>于是：</p>
-
-<script type="math/tex; mode=display">
-F(4.5) = 4.5 \times 3.5 \times 2.5 \times 1.5 \times \frac{\sqrt{\pi}}{2}
-</script>
 ]]></content>
   </entry>
   
