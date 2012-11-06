@@ -87,8 +87,14 @@
         <lastmod>2012-11-05T00:30:01+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://Aquietzero.github.com/blog/2012/11/06/shang-di-zhi-tou-zi-ma-%3F-liang-zi-wu-li-shi-hua/
+        </loc>
+        <lastmod>2012-11-06T15:52:58+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://Aquietzero.github.com/blog/archives/</loc>
-        <lastmod>2012-11-05T00:30:01+08:00</lastmod>
+        <lastmod>2012-11-06T15:52:58+08:00</lastmod>
     </url>
     <url>
         <loc>http://Aquietzero.github.com/about/</loc>
@@ -96,6 +102,6 @@
     </url>
     <url>
         <loc>http://Aquietzero.github.com/</loc>
-        <lastmod>2012-11-05T00:30:01+08:00</lastmod>
+        <lastmod>2012-11-06T15:52:58+08:00</lastmod>
     </url>
 </urlset>
