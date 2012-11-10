@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Null Space</title>
+  <meta name="author" content="zero">
+
+  
+  <meta name="description" content="最近开始复习数学了，只可惜github上的markdown并不支持数学公式，所以有些总结估计还是得放在博客里，下面是效果： % <![CDATA[ \begin{align}
+\mbox{Union: } & A\cup B = \{x\mid x\in A \mbox{ or } x\in B &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Aquietzero.github.com/blog/page/3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Null Space" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Aquietzero.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <header role="banner"><hgroup>
+  <h1><a href="/">Null Space</a></h1>
+  
+    <h2>with &infin; dimension and no inverse...</h2>
+  
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/16/adding-mathjax-support-to-octopress/">Adding MathJax Support to Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-16T00:14:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近开始复习数学了，只可惜github上的markdown并不支持数学公式，所以有些总结估计还是得放在博客里，下面是效果：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+\mbox{Union: } & A\cup B = \{x\mid x\in A \mbox{ or } x\in B\} \\
+\mbox{Concatenation: } & A\circ B  = \{xy\mid x\in A \mbox{ and } y\in B\} \\
+\mbox{Star: } & A^\star  = \{x_1x_2\ldots x_k \mid  k\geq 0 \mbox{ and each } x_i\in A\} \\
+\end{align}
+ %]]></script>
+
+<p>步骤主要参考以下博客，既然他已经说得如此详细，我就没必要浪费唇舌了，所以直接上链接吧。</p>
+
+<p><a href="http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/">http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/10/goodbye/">Goodbye, UC</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-10T10:30:00+08:00" pubdate data-updated="true">Oct 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天上午找完老师以后，下午就去UC辞职了，从而结束了3个月的实习。</p>
+
+<p>这三个月确实非常难忘，跟其他同学的实习对比了一下，UC的待遇确实是很优厚的，无论是工作环境还是伙食。但毕竟我保研在身，而且想做的事情还有很多，考虑到最后也还是要回到学校，所以还是趁早辞职了。</p>
+
+<p>回想最近一年，我都是在不停地写代码，工程能力可能有所提高，但是渐渐地我发现，我好像一直都在原地踏步，原因在于，我可能把过多的时间都放在写代码上面了，所以没有太多的时间看书以及提高自己的理论修养。我本身非常喜欢数学和物理，但每每想到我每天都在以飞快的速度忘记它们的时候，我就略感伤心。虽然，从工作层面上来看，这些知识其实也没有太大的应用，但是我却不甘心这些辛辛苦苦学来的东西最后是没有用处的。于是我打算先花点时间重温一下它们，如果我每天继续上班的话，那显然是没有这个时间的，所以我还是辞职回到了学校。</p>
+
+<p>在UC工作的过程中，我还学到最重要的一件事情，那就是做事一定要专心以及专一，因为在工作分配上一般都是一个时段只有一项工作，这就直接保证了专心。但是如果不是在工作中，自己可能会有很多异想天开的想法，有时候还会非常冲动地希望一一将其实现，想法当然是好的，但如果不忍住诱惑，往往难以完成。正如上个月的我，开了很多项目，却又无法分身，最后导致各项目都进展缓慢甚至停滞，这无疑得不偿失。</p>
+
+<p>接下来的计划如上所说，先花点时间去复习一下数学，毕竟这是我后面所需要到的重要武器，估计会有比较长的一段时间远离代码了…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/03/translation-juste-une-photo-de-toi/">Translation: Juste Une Photo De Toi</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-03T13:48:00+08:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>这两天听到一首比较有感觉的歌，歌手没有什么特别，但是音乐感觉不错。</p>
+
+<pre><code>Juste une photo de toi [Pokara]
+
+Si on faisait un flash-back 如果我们能回到过去
+On revenait en arrière 那么就让我们回到从前
+Pour te rappeller ce qu'tu me disais 让你回忆起你跟我说过的话
+Qu'on resterait ensemble jusqu'à redevenir poussières 你说我们会一直厮守，直到化为尘土
+Au final tout ça se n'était que des paroles en l'air 可到了最后，所有的这一切仅仅是虚无飘渺的诺言罢了
+Et j'ai pas vu que tu jouais 我并没有看到你在玩
+Toute cette histoire un jeu d'échecs dont tu étais la reine 但你却是棋盘上的皇后
+Ohohoh 噢噢噢
+
+J'ai l'coeur en vrac et 我心乱如麻
+Si je dérape c'est  如果我出什么差错
+Parce que t'es parti, aussi vite que t'es arrivée 那是因为你来去匆匆
+Et tu t'en es allée avec un bout de moi 你的离开使我残缺不全
+Maintenant 现在
+
+Tout ce qu'il me reste 我所剩下的
+C'est juste une photo de toi 就只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Tout ce que tu m'laisse 你留下来给我的
+C'est juste une photo de toi 就只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Na Na Na Na Na Na Na Na Na Na Na 不不不不不不不不
+
+La musique qui s'arrête 音乐停止了
+Le rideau qui se baisse 帷幕降下了
+Et mon sourire disparait quand les lumières s'éteignent 舞台灯光熄灭的瞬间，我的笑容也消逝了
+Même les applaudissements ne pourront rien y faire 甚至那里的掌声也戛然而止了
+Et pour toi j'étais prêt à remuer ciel et terre 为了你我都做好了上天下地的准备
+Mais t'as pas vu tout c'que j'ai fais  但是我做得一切对你来说都形同虚设
+J'ai perdu ma bataille il n'y a plus rien à faire 我已经输了，再也没有什么可以做了
+Ohohoh 噢噢噢
+
+J'ai l'coeur en vrac et 我心乱如麻
+Si je dérape c'est  如果我出什么差错
+Parce que t'es parti, aussi vite que t'es arrivée 那是因为你来去匆匆
+Et tu t'en es allée avec un bout de moi 你的离开使我残缺不全
+Maintenant 现在
+
+Tout ce qu'il me reste 我所剩下的
+C'est juste une photo de toi 就只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Tout ce que tu m'laisse 你留下来给我的
+C'est juste une photo de toi 就只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Juste une photo de toi 只有一张你的照片
+Na Na Na Na Na Na Na Na Na Na Na 不不不不不不不不
+
+Maintenant je maudit le jour où j't'ai rencontrer 现在，我抱怨我们相遇的那一天
+J'aurai pas dû te regarder 当时，我不应该看着你
+Si t'es plus là 如果你已经不在了
+Tout ces souvenirs qu'est-ce que j'en fais 那么我留着你的记忆干什么呢？
+Je veux juste t'oublier 我只想把你忘记
+
+[REFRAIN]
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/28/translation-il-y-a-trop-de-gens-qui-taime/">Translation: Il Y a Trop De Gens Qui T&#8217;aiment</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-28T12:38:00+08:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>到了大四终于没有什么课了，于是希望把法语学好一点。计划之一就是翻译歌曲了。还记得当初听的第一首法语歌是Hélène Segara的《Encore une fois》，从此就爱上了她的声音，于是打算从她的歌翻译起。总不能听了一年有多都不知道她唱什么吧…经过翻译我才发现一点都不容易，即使只有少部分单词不会，但是语言转换起来却有非常大的困难。希望各位读者指正吧，欢迎各种建议。</p>
+
+<p>有两个疑惑的地方：</p>
+
+<ul>
+  <li><strong>trop de gens qui t’aiment</strong>里面的<strong>de</strong>我听了无数次都听不到。</li>
+  <li><strong>je ne sortirai pas indemne de cet amour avec toi</strong>里面的<strong>de</strong>我听了无数次都听不到。</li>
+</ul>
+
+<p>以下基本上都是意译，固有一些地方不是对应原文的。</p>
+
+<pre><code>Il y a trop de gens qui t'aiment [Hélène Segara]
+
+Je te regarde parler avec les gens 我看着你在人群里谈笑风生
+Tu me sembles si léger même transparent 在我眼中，你是如此地触不可及
+J'regarde passer les jours, la vie en me disant 生活一天天地过去
+Je n'cherche pas l'amour, je m'y attends 我不会去寻觅爱情，只是独自等待
+J'te regarde t'amuser et je fais semblant(1) 我假装看着你自娱自乐
+Mais je n'peux pas t'empêcher d'être un enfant 但是我却不能像小孩子那样去阻止你
+Toi tu fais de grands gestes, tu as l'air si content 你的动作大大咧咧的，看上去非常高兴
+Tu vois des fois j'déteste ce que je ressens(2) 我厌恶这样的感觉，你都看到过几次了
+
+Il y a trop de gens qui t'aiment 有太多的人爱你了
+Et tu ne me vois pas 以至于你看不到我的存在
+Je ne sortirai pas indemne de cet amour avec toi 我并不能从甜蜜的爱情中全身而退
+Trop de gens qui t'aiment 有太多的人爱你了
+Qui tournent autour de toi 她们都围在你身边
+Tous les mots d'amour 我所有的那些甜言蜜语
+Que je sème(3) tu ne les entends pas 你没有听到
+
+J'me sens si loin de toi à des moments(4) 有时候，我觉得与你相隔千里
+Je n'voudrais pas qu'tu crois que je t'attends 我并不想让你以为我在等你
+J'me force à espérer, mais je me mens 我真希望如此，但我只是自欺欺人罢了
+Alors je te regarde t'éloigner(5) tout doucement 于是就看着你温柔的背影渐行远去
+
+Il y a trop de gens qui t'aiment 有太多的人爱你了
+Et tu ne me vois pas 你根本看不到我的存在
+Je ne sortirai pas indemne de cet amour avec toi 我并不能从甜蜜的爱情中全身而退
+Trop gens qui t'aiment 太多的人爱你了
+Qui tournent autour de toi 她们都围在你身边
+Et moi évidemment, je t'aime à mes dépends 我，毋庸置疑，即使牺牲一切也会爱着你
+Il y a trop de gens qui t'aiment 有太多的人爱你了
+Et tu ne me vois pas 你根本看不到我的存在
+Je ne sortirai pas indemne cet amour avec toi 我并不能从甜蜜的爱情中全身而退
+Trop de gens qui t'aiment 有太多的人爱你了
+Et tu ne vois même pas 你甚至连她们都无视了
+Qu'c'est à cause de toi 正是因为你
+Que je mène(6) chaque jour ce drôle de combat(7) 我每天才那么可笑地纠结着
+Trop gens qui t'aiment 有太多的人爱你了
+Et tu ne vois même pas 你甚至连她们都无视了
+Qu'c'est à cause de toi 正是因为你
+Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结着
+</code></pre>
+
+<h2 id="annotation">Annotation</h2>
+
+<ol>
+  <li>faire semblant de faire qqch. 假装做某事</li>
+  <li>ressentir 感到，觉得</li>
+  <li>semer 播种，撒，散花</li>
+  <li>à des moments 有时候</li>
+  <li>éloigner 离开，移开，疏远</li>
+  <li>mener 带领，率领，引导，进行</li>
+  <li>combat 战争</li>
+</ol>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/27/framework-for-expressjs-and-client-side-js-mv-star-framwork/">Framework for Expressjs and Client-side Js MV* Framwork</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-27T16:00:00+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>这段时间一直希望自己写一个单词学习的应用，因为过去用过太多的背单词软件，但是基本上都不符合我的学习规律，并没有能提高我学习外语的热情，鉴于这个学期希望好好学好法语，于是才有了这样的动力。</p>
+
+<h2 id="section">工具</h2>
+
+<p>我将其命名为<strong>Mnemon</strong>，项目详情可以参看<a href="https://github.com/Aquietzero/Mnemon">这里</a>。起名原因以及其含义相信读计算机的朋友们应该一目了然了。我希望完全用javascript来完成这个应用，所以采用如下组合：</p>
+
+<ul>
+  <li><strong>数据库：</strong> Mongodb</li>
+  <li><strong>服务器：</strong> Nodejs</li>
+  <li><strong>服务端框架：</strong> Express.js</li>
+  <li><strong>客户端框架：</strong> Ember.js</li>
+</ul>
+
+<h2 id="section-1">文件目录结构</h2>
+
+<p>由于这个项目才刚刚开始，这篇文章打算简单描述一下Mnemon的架构。</p>
+
+<h3 id="section-2">外层目录结构</h3>
+
+<p>下面是最外层的文件结构：</p>
+
+<pre><code>───┬─── client
+   ├─── config
+   ├─── doc 
+   ├─── lib 
+   ├─── public 
+   ├─── server 
+   ├─── index.js
+   ├─── package.json
+   ├─── README.md
+   └─── server.coffee
+</code></pre>
+
+<p>下面先简单讲述一下这个最外层的目录结构。最主要的两个文件夹分别是<code>client</code>和<code>server</code>，分别存放客户端和服务端的代码。<code>config</code>里面存放关于这个应用的服务端配置文件，<code>doc</code>存放相关文档，即开发日志，问题总结之类的文档。<code>lib</code>存放整个项目所用到的一些共用库。<code>index.js</code>则是整个应用的入口，其中包含了对<strong>coffeescript</strong>的支持，从这个文件开始的所有js文件实际上都是coffeescript来的。<code>package.json</code>描述了这个项目的包依赖。<code>server.coffee</code>则是真正意义上的应用入口，但是它是靠<code>index.js</code>来调用的。</p>
+
+<h3 id="section-3">客户端目录结构</h3>
+
+<p>下面详细看看这些目录里面的内容，首先是客户端的：</p>
+
+<pre><code>client
+  └───┬── coffee 
+      │     ├── models 
+      │     ├── controllers 
+      │     └── views
+      ├── css 
+      ├── js 
+      ├── libs 
+      └── index.html
+</code></pre>
+
+<p>客户端里面放的实际上是一整个分离的客户端代码，<code>index.html</code>是客户端的入口，<code>libs</code>里面放着客户端所需要的库，由于我这个应用客户端的框架用的是<strong>Ember.js</strong>，于是这里面就放着与<strong>Ember.js</strong>相关的库。<code>css</code>是整个客户端的样式代码。在<code>coffee</code>里面则放着客户端最核心的代码，即MVC的代码，其后会被编译成对应的javascript，最后在<code>index.html</code>里面引用的也就是这些编译好的javascript代码。</p>
+
+<h3 id="section-4">服务端目录结构</h3>
+
+<p>接下来看看服务端的代码：</p>
+
+<pre><code>server 
+  └───┬── assets 
+      │     ├── javascripts 
+      │     └── stylesheets 
+      ├── controllers 
+      ├── models
+      ├── views 
+      └── helpers
+</code></pre>
+
+<p>服务器端其实代码结构跟客户端也没有太大的差别，实际上大家都是MVC结构嘛。这样的目录结构实际上是参照rails的目录结构来构建的。但是这里的<code>javascript</code>以及<code>stylesheet</code>实际上是服务端渲染页面的代码，这个是需要注意的。</p>
+
+<h2 id="section-5">配置以及启动</h2>
+
+<p>然后最重要的，各部分的桥梁可以说是<code>config</code>文件夹了：</p>
+
+<pre><code>config 
+  └───┬── config.coffee 
+      ├── db.coffee
+      └── routes.coffee
+</code></pre>
+
+<p>其中<code>config.coffee</code>是进行express的各种配置工作，比如静态路径，比如根目录，比如端口号之类。<code>db.coffee</code>主要是对数据库进行链接。<code>routes.coffee</code>就是路由映射了。</p>
+
+<p><strong>这样的应用有点特别之处，那就是为什么要专门分开客户端和服务端两个部分呢？正是因为在客户端使用了MVC的框架。在客户端使用了MVC框架意味着客户端自己有一套私有的路由，那是用来控制客户端行为的状态转换的，这样实际上跟服务端就发生了冲突，因为客户端的逻辑不用经过服务端就能跳转了。</strong>既然如此，我们就干脆将它们分开，既然客户端逻辑那么重，我们的服务端就干脆只提供服务好了，让客户端的MVC来自己处理跳转逻辑。这样，当客户端需要信息的时候，就直接用异步的方式向服务器请求，请求还是遵循REST的风格，这样express也不至于没有用。</p>
+
+<p>将客户端以及服务端分开需要两处启动。服务端直接用如下的命令启动：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="sh"><span class="line">sudo mongod
+</span><span class="line">node index
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>客户端可以放在web根目录下，如果是本地应用的话也可以开python的服务器，这样打开客户端里面的<code>index.html</code>即可访问应用。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/10/footprint-macau/">Footprint: Macau</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/06/shang-di-zhi-tou-zi-ma-%3F-liang-zi-wu-li-shi-hua/">Book Review: 上帝掷骰子吗？—量子物理史话</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/03/linear-space-and-euclidean-space/">Linear Space and Euclidean Space</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/01/the-definition-of-irrational/">The definition of irrational</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/31/translation-parler-a-mon-pere/">Translation: Parler à mon père</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/Aquietzero">@Aquietzero</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Aquietzero',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    <li class='category'><a href='/blog/categories/book-review/'>Book Review (2)</a></li>
+<li class='category'><a href='/blog/categories/express/'>Express (1)</a></li>
+<li class='category'><a href='/blog/categories/footprint/'>Footprint (1)</a></li>
+<li class='category'><a href='/blog/categories/french/'>French (3)</a></li>
+<li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (6)</a></li>
+<li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
+<li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
+<li class='category'><a href='/blog/categories/probability/'>Probability (1)</a></li>
+<li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
+<li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
+<li class='category'><a href='/blog/categories/translation/'>Translation (3)</a></li>
+<li class='category'><a href='/blog/categories/trivial/'>Trivial (1)</a></li>
+
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - zero -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'aquietzero';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Null Space</title>
+  <meta name="author" content="zero">
+
+  
+  <meta name="description" content="自从六月底的助教结束以后，我就来到了UC实习。这段时间不能说学到了很多东西，但也不是什么都没有学到。这段时间感觉很多事务都同时进行着，有点乱，有点充实，也有点彷徨。 主线1：UC实习 贯穿这三个月的主线无疑是在UC的实习生活了。说实话，在UC工作我非常愉快，早上九点半上班，包三餐， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Aquietzero.github.com/blog/page/4/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Null Space" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Aquietzero.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <header role="banner"><hgroup>
+  <h1><a href="/">Null Space</a></h1>
+  
+    <h2>with &infin; dimension and no inverse...</h2>
+  
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/25/summary-of-july/">Summary of July, August and September</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-25T18:38:00+08:00" pubdate data-updated="true">Sep 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>自从六月底的助教结束以后，我就来到了UC实习。这段时间不能说学到了很多东西，但也不是什么都没有学到。这段时间感觉很多事务都同时进行着，有点乱，有点充实，也有点彷徨。</p>
+
+<h2 id="uc">主线1：UC实习</h2>
+
+<p>贯穿这三个月的主线无疑是在UC的实习生活了。说实话，在UC工作我非常愉快，早上九点半上班，包三餐，并且工作环境也还算不错，我每天在座位上效率都很高，但是这是有代价的，这个容后再说。一进UC给我们的任务就是写一个HTML5的游戏，当然，这只是一个热身的项目，为期一个月，旨在要我们熟悉整个开发的流程，并且让我们体验团队合作以及一股作气专心做一件事情的威力，我也确实感受到了。在每天的编程之中，我都充满激情，那些学习的时候感到非常抽象的设计模式居然能自然地在代码重构的时候运用，这是最令人鼓舞的一件事情了。</p>
+
+<p>其实我本来就没正式写过什么游戏，这次的写游戏经历确实使我受益终生。在之后，我又写了两个小游戏，一个是像素风格的贪吃蛇，另一个是消金币。虽然这些游戏逻辑都非常简单，但是写到就发现，有太多的细节需要斟酌了。比如我们的第一个游戏，在此还是现将其叫做2D版的temple run吧，主角跳的动画，获取道具的动画，以及背景的云雾如何票动，这些都是一些看似微小，但是实际上却非常影响整个游戏的体验。这个游戏最为失败的地方就是没有人帮我们设计主角，以至于到最后，其实也无所谓最后，我们的主角就仅仅是一个没有五官的小人。</p>
+
+<p>在接下来的八月以及九月，就基本上是自由学习时间了。在工作更迭的时候，我被问到是希望做游戏还是希望做应用，我当然毫不犹豫地说是做游戏，但是由于UC主要并不是以游戏开发为主，所以我就变得比较闲了，任务就是研究nodejs，看看它能为服务端的游戏带来什么。其实我本来就想学一下nodejs，这下名正言顺了。但是由于这个东西仍在飞速发展当中，很多东西都在变。说实话，看了一个月的mongodb，socket.io，express等，发现这些东西确实好美，在应用他们的时候，我也用上了coffeescript，这个东西一直没有什么机会用，就是因为我之前开的一些项目都是用javascript的，不是太愿意将几千行的代码转为coffeescript，于是就一直不了了之。但是最近用起来确实是很爽，爽到我基本不去考虑效率了。</p>
+
+<p>在我们团队里，基本上就只有我有那么多的自由学习时间，他们都在为公司做贡献。其实当初我也有点不好意思，但是慢慢地就没什么感觉了。因为我发现他们做的东西我并不是太感兴趣，虽然说为公司做事是不能讲兴趣的，但是我也有点庆幸我不用去做那些事情。其好处就是我的物理引擎进展比较大，当然，在我写这篇文章的时候又遇到了瓶颈，这个后面再说。</p>
+
+<p>既然公司那么自由，待遇又那么好，那究竟还有什么不好的呢？不好之处就是时间浪费比较严重。因为来回车程都浪费了一个半小时以上，并且即使晚上回来才八点左右，但是实际上我已经筋疲力竭了，所以每天晚上回来不是看片就是聊天，并没有太多的代码或者阅读贡献，非常惭愧…</p>
+
+<h2 id="section">主线2：物理引擎</h2>
+
+<p>其实很久以前就想自己写一个物理引擎以及渲染引擎了，但是THREE.js已经做得很好了，于是我就把目光投向了物理引擎。不过说实话，我并不是想要做出什么特别厉害并且效率非常高的引擎，我只是想学习一下引擎的架构，并且对那些碰撞算法感兴趣而已，最后做得如何还不得而知。</p>
+
+<p>这个项目从我做助教的时候就开始了，大概两周的时间就把简单的牛顿力学实现完了。然后剩下的两个多月的日子都是纠结在碰撞检测上面，那本六百多页的巨著现在也只是进行到三分之一多一点点而已，其实我对效率还是有点担心的，因为实在是非常慢，虽然基本上每周都有进展。但是由于只是一个人在做，遇到困难的问题会有惰性，又没有谁可以讨论，所以比较悲剧。不管如何，既然坚持了那么就我就希望我能继续做下去，无论是做成物理引擎还是做成算法的演示系统，我都会感到很快乐的。</p>
+
+<h2 id="section-1">主线3：琐碎项目</h2>
+
+<p>除了这两条主线以外，还有一些琐碎的项目，但是这些基本上都是没有头没有尾的，例如上面说到的像素风格贪吃蛇，这个小游戏仅仅写了一个下午，但是我觉得这个东西可以做下去的方向挺多，也挺吸引，但是却没有继续了，或者在未来会继续。另外，本来还希望写一个3D的数据可视化，但是后来发现需要的知识和时间是挺多的，所以为了保证物理引擎的进度，也还是暂停了。还有一些比较小的，这里就不说了。</p>
+
+<p>总的来说，这个暑假还是算充实，但由于编码太多，或许真正学到的没有太多，不过我觉得无论在架构方面还是在数学方面都有了不同程度的提高。接下来努力的方向估计还是继续打好数学的基础了，毕竟那才是研究所需的坚实后盾。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/11/on-nodejs-modules/">On NodeJs Modules</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-11T10:18:00+08:00" pubdate data-updated="true">Sep 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>对于Node的初学者来说，可能对模块化方面比较模糊，网上的资料比较分散，在此总结一下。</p>
+
+<h2 id="require--exports">require 和 exports</h2>
+
+<p>个人感觉客户端js的最大缺点就是模块化难，原因有二：</p>
+
+<ol>
+  <li>JavaScript没有类的概念，虽然可以用一些方法来模拟类，但是远没有直接用<code>class</code>定义来得直接，针对这个缺点，可以用<strong>CoffeeScript</strong>来替代，但在下一篇文章会说说如何用JavaScript来模拟类。</li>
+  <li>JavaScript没有包含文件的功能，这就导致了必须自己来组织文件的顺序，从而在<code>index.html</code>里面按顺序把包含的<code>.js</code>文件一一列出。当然还有其他的方式，但是原理还是如此。使用工具的话推荐<a href="https://github.com/jrburke/requirejs">RequireJs</a>以及<a href="https://github.com/substack/node-browserify">browserify</a>，但使用起来依然不是那么方便。</li>
+</ol>
+
+<p>为此，在Node里面就方便很多了，其默认将各个文件看作是各个独立的<strong>Module</strong>，即在一个文件里面定义的变量，函数都不为其他文件所见，下面举个简单的例子。比如在文件<code>add.js</code>如下：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">file_name</span> <span class="o">=</span> <span class="s1">&#39;add.js&#39;</span><span class="p">;</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>那么在别的文件是不能访问<code>file_name</code>这个变量以及<code>add</code>这个函数的，如果要在别的文件里面使用它们，那么就必须先把它们<strong>暴露</strong>到这一个文件模块的外部，可以用如下的方式：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">file_name</span> <span class="o">=</span> <span class="s1">&#39;add.js&#39;</span><span class="p">;</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">file_name</span> <span class="o">=</span> <span class="nx">file_name</span><span class="p">;</span>
+</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>这样，我们就可以在别的文件使用这些变量了，在<code>use.js</code>里面使用方式如下：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// use.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">add_file</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./add&#39;</span><span class="p">);</span>
+</span><span class="line">
+</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add_file</span><span class="p">.</span><span class="nx">file_name</span><span class="p">);</span> <span class="c1">// output =&gt; add.js</span>
+</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add_file</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt; 7</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>由此可以看出，在<code>add.js</code>里面，我们把需要暴露的变量绑定到<code>exports</code>对象上面，然后真正返回出去的实际上是<code>exports</code>对象，在<code>use.js</code>里面调用<code>require</code>语句的时候，返回出来的<code>exports</code>对象被<code>add_file</code>变量接住了，所以就可以使用那些本来绑定在<code>exports</code>对象上面的变量了。</p>
+
+<h2 id="exports--moduleexports">exports 和 module.exports</h2>
+
+<p>既然<code>exports</code>是这样的一个对象，那么我们也可以这样进行绑定，比如<code>person.js</code>如下：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// person.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+</span><span class="line">    <span class="k">this</span><span class="p">.</span><span class="nx">age</span>  <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class="line">    <span class="nx">introduce</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="line">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
+</span><span class="line">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="s1">&#39; years old.&#39;</span><span class="p">);</span>
+</span><span class="line">    <span class="p">}</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">;</span>
+</span><span class="line"><span class="c1">// exports = Person; DOES NOT WORK!</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>然后在<code>class.js</code>里面调用：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// class.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./person&#39;</span><span class="p">);</span>
+</span><span class="line">
+</span><span class="line"><span class="kd">var</span> <span class="kr">class</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span>  <span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
+</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Jim&#39;</span>  <span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Mary&#39;</span> <span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</span><span class="line"><span class="p">];</span>
+</span><span class="line">
+</span><span class="line"><span class="kr">class</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">    <span class="nx">person</span><span class="p">.</span><span class="nx">introduce</span><span class="p">();</span>
+</span><span class="line"><span class="p">});</span>
+</span><span class="line">
+</span><span class="line"><span class="cm">/**</span>
+</span><span class="line"><span class="cm"> * output:</span>
+</span><span class="line"><span class="cm"> * I am Tom. I am 13 years old.</span>
+</span><span class="line"><span class="cm"> * I am Jim. I am 12 years old.</span>
+</span><span class="line"><span class="cm"> * I am Han meimei. I am 13 years old.</span>
+</span><span class="line"><span class="cm"> */</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>可以看出，这个时候把<code>Person</code>作为整个模块的输出，那么<code>exports</code>和<code>module.exports</code>有什么区别呢？<strong>实际上，<code>exports</code>只是<code>module.exports</code>的一个helper，<code>exports</code>的作用在于收集需要暴露的变量，并将其包装为一个对象交给<code>module.exports</code>进行输出，所以<code>exports = Person</code>没有任何效果，<code>Person</code>没有绑定到<code>exports</code>。</strong>既然这样，写的时候就必须注意了，因为<code>exports</code>最后会交给<code>module.exports</code>进行输出，所以如果这两者同时存在，绑定到<code>exports</code>的变量会被<code>module.exports</code>的值所覆盖，即：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">;</span>
+</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">something</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">// `something` is blocked.</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h2 id="section">模块化组织</h2>
+
+<p>明白了上面所说的以后，进行模块化组织就很方便了，看看如下的文件结构：</p>
+
+<pre><code>└─┬─ lib
+  │   ├── add.js
+  │   ├── sub.js
+  │   └── math.js
+  └─ use.js
+</code></pre>
+
+<p>个文件如下：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="c1">// sub.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">sub</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="line">    <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="c1">// math.js</span>
+</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class="line">    <span class="nx">add</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./add&#39;</span><span class="p">),</span>
+</span><span class="line">    <span class="nx">sub</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./sub&#39;</span><span class="p">),</span>
+</span><span class="line"><span class="p">}</span>
+</span><span class="line">
+</span><span class="line"><span class="c1">// use.js</span>
+</span><span class="line"><span class="kd">var</span> <span class="nx">math</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./lib/math&#39;</span><span class="p">);</span>
+</span><span class="line">
+</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt;  7</span>
+</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt; -1 </span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/18/an-egg-measuring-puzzle/">An Egg Measuring Puzzle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-18T10:18:00+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前两天做培训的时候，同事问了我一道称蛋的题目，乍一听，跟我们平常所接触的称蛋问题看上去非常相似，但实际上难度却大多了…</p>
+
+<p>先来回顾一下平常所遇见到的普通的称蛋问题:</p>
+
+<blockquote>
+  <p>有十二只蛋，其中有一只蛋坏掉了，这只坏掉的蛋是比其它的蛋都要重的，请问称3次能找出这只蛋吗？</p>
+</blockquote>
+
+<p>答案当然是可以的，这种题目就是要找出这个找出坏蛋的称蛋方法，工具一般是天平。这种题非常简单，因为题目已经明确说明了坏蛋是更重的，所以用如下的步骤即可：</p>
+
+<ul>
+  <li>从12只蛋里面拿出8只，把它们分成4只4只两组分别放在天平两边。
+    <ul>
+      <li>如果平衡，则坏蛋在剩下的4只蛋里面。</li>
+      <li>如果不平衡，则坏蛋在较重一边的4只蛋里面。</li>
+    </ul>
+  </li>
+  <li>对于两种情况来说，都是在四只蛋里面确定一只坏蛋，方法其实如上，将其分为两组，每组两只，则坏蛋在较重一边。</li>
+  <li>最后就只是在两只蛋里面选一只，一称即可。</li>
+</ul>
+
+<p>从上面可以看出，第一步确定四只蛋，第二步确定两只蛋，最后一步确定坏蛋。之所以能够这样做，就是因为坏蛋是比较重的，这样意味着从两只蛋里面可以确定坏蛋。但是前两天所遇到的称蛋问题，却没有那么的容易。题目如下：</p>
+
+<blockquote>
+  <p>有十二只蛋，其中有一只蛋坏掉了，但是不知道这只坏蛋是重了还是轻了，请问称3次能找出这只蛋吗？</p>
+</blockquote>
+
+<p>乍一看，两题真的非常相似，但是有一个极为不同的地方，那就是现在不知道坏蛋是重了还是轻了，所以当只有两只蛋的时候，根本就无法判定哪一只是坏蛋。一开始可能没有任何的思路，这样我们可以套用上面的方法看看有没有效果。为了更为形象的表述，我打算用一些简单的ASCII图。</p>
+
+<p>首先可以这样：</p>
+
+<pre><code>  oooo       oooo
+`------'   `------'
+    \_________/
+        /_\            oooo
+</code></pre>
+
+<p>如果天平平衡的话，那么坏蛋就可以确定在剩下的四只蛋里面，这无疑大大缩小了范围。但是如果天平并不平衡的话，我们也不能确定坏蛋在天平的那一边，这样实际上我们就只能确定到坏蛋在8只蛋里面，这是一个非常大的范围。由于这样称算是占用了一次，如果4只蛋的那边能用两次就确定到坏蛋的话，那还是有可能把题目解出来的。</p>
+
+<p>这样的话问题就变成是从4只蛋里面挑坏蛋了。由于不知道坏蛋的轻重，所以必须精确到一只蛋。从四只蛋里面拿出两只，分别放到天平两边(要注意的是，原来天平两边的四只蛋并不用拿出)，如下图：</p>
+
+<pre><code>  ooooo       ooooo
+`-------'   `-------'
+    \__________/
+         /_\            oo
+</code></pre>
+
+<p>下面会有两种情况出现：</p>
+
+<ol>
+  <li>
+    <p>如果天平现在平衡，那么说明剩下的两只蛋里面有一只是坏蛋，这样的话拿剩下两只蛋中的一只换掉天平里面的任意一只。如果天平保持平衡，那么剩下的一只就是坏蛋，如果天平不平衡，那么拿去换蛋的那只蛋就是坏蛋。</p>
+  </li>
+  <li>
+    <p>如果天平现在不平衡，那么说明加上去天平的两只蛋有一只是坏蛋，从两只蛋中挑坏蛋的方法可以用第一种情况的方法来解决。</p>
+  </li>
+</ol>
+
+<p>就这样便可以从四只蛋中找出坏蛋了。剩下的难题就是从8只蛋中找出坏蛋了。如果一开始天平并不平衡，那么坏蛋就在天平上的8只蛋中，要从两次的称量中找出坏蛋，这的确不容易。这里需要一个新的思路，那就是给蛋进行编号：</p>
+
+<pre><code>                  5678
+    1234        `------'
+  `------'         /
+      \___________/
+           /_\            oooo
+</code></pre>
+
+<p>如果一开始天平是如此倾侧的话，为了判断蛋在哪边，我们进行一个简单的交换：</p>
+
+<pre><code>                 278
+    156        `-----'
+  `-----'         /
+      \__________/
+           /_\            oooo
+</code></pre>
+
+<p>如果此时天平没有改变倾斜的方向，那么就可以断定坏蛋在1，7，8中。为什么呢？因为如果坏蛋在1，7，8中的话，那么决定天平如何倾斜的也就是1，7，8三个蛋，如果这三个蛋位置不变，那么天平的倾斜方向也是不会变的。既然确定了坏蛋在1，7，8中，那么我们可以称7和8，如果它们等重，那么坏蛋就只比较重的1，如果7，8并不等重，那么7，8里面较轻的一个就是坏蛋，这样的结果可以跟上面的图进行对比，因为7，8所在的一边是较轻的，如果7，8中有坏蛋的话，那必定是更轻的一个。</p>
+
+<p>同理，如果出现下面的情况：</p>
+
+<pre><code>    156
+  `-----'       278
+     \        `-----'
+      \__________/
+           /_\            oooo
+</code></pre>
+
+<p>变换2，5，6位置以后天平倾斜方向改变，则可以断定坏蛋在2，5，6里面，其判断方法跟上面是一样的。最后还有一种情况，那就是拿走了3，4以后，天平保持平衡，那么很明显，3，4里面就有一只坏蛋了，判断方法可以用最开始的方法。当然也可以直接称3和4，因为如果1，2，3，4那边本来比较重的话，那么3，4之中比较重的是坏蛋，反之就是更轻的为坏蛋。</p>
+
+<p>这是一道非常有趣的题目，用编号加上逻辑推理来减少称量次数，为此记录一下。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/06/dual-monitors-in-ubuntu/">Dual Monitors in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-06T12:38:00+08:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>家里的台式机实在用了太久了，终于在上周走到了生命的尽头。其实坏掉的就只有主机而已，显示器还是非常好的，色彩非常鲜艳美丽。之前一直嫌手提屏幕太小，无论是写代码还是建模，图像处理之类的都非常非常不方便，希望有一个大大的显示器来满足我这些愿望。随着家里的台式电脑的报废，我这个愿望终于得以了实现。</p>
+
+<p>其实在ubuntu上面搞双显示器应该是非常简单的，接线，打开nvidia控制面板进行设置就可以了。但我的ubuntu总是那么的多灾多难，之前就因为识别不了新买的wacom手写板而使我欲望全无。当我接线以后，nvidia控制面板“似乎”识别到了我的三星显示器，但是分辨率却没有合适的，我选择了一个比较接近的分辨率，结果屏幕是扩展了，但是效果并不好。当然，都不是其原生的最佳分辨率，效果当然不好。</p>
+
+<p>我一开始以为外接屏幕的分辨率是受限于手提的屏幕分辨率的，比如手提的分辨率为<code>1366x768</code>，那么外接显示器的纵向分辨率就不能超过<code>768</code>。对于对显示要求很高的我来说，这样的效果是绝对看不顺眼的，忍了一两个小时以后，我开始搜索，问人，后来发现两者的分辨率是可以不一致的，都是可以达到最佳的分辨率。接着就是疯狂的搜索了。</p>
+
+<p>既然没有可选的分辨率，那么就为其添加，这是最基本的思路，于是搜到一大堆的结果，基本上都是说在<code>/etc/X11/xorg.conf</code>里面添加字段来说明，但是这种方法对我的电脑并不适用，修改了以后连X都不能进入了。进入recovery模式修改回来以后又能进去了，于是我抛弃了这种办法。</p>
+
+<p>紧接着，我搜到了<code>xrandr</code>，这条命令不带参数时的作用是列出已经识别出的显示器及其名字，可选分辨率。我得到的结果是</p>
+
+<pre><code>xrandr: Failed to get size of gamma for output default
+</code></pre>
+
+<p>这个反馈给我的第一个反映就是我的三星显示器根本就没有被识别到。我对这个结果进行了搜索，结果发现很多人碰到了这个问题，问题出于外接显示器的<code>EDID</code>没有被识别到。天啊，于是紧接着我搜到<code>read-edid</code>这个工具可以读取<code>EDID</code>，下了工具以后希望有所帮助。于是我使用命令<code>sudo get-edid | parse edid</code>来进行<code>EDID</code>的获取及识别工作，结果又出乎我意料</p>
+
+<pre><code>The EDID data should not be trusted as the VBE call failed
+Error: output block unchanged
+</code></pre>
+
+<p>看到这样的结果心都碎了，这已经是我能搜到的方法了，基本上全部方法的第一步都不成功。于是我打开<code>/var/log/Xorg.0.log</code>，发现根本就是识别不到显示器的，这时候我才想到有可能是硬件的问题(显然，前面的那些方法都迷惑了我，以至于我没有一开始就考虑硬件的问题。不过这也很难说，因为我的双显示器是工作的，只是分辨率不对而已，我根本就没有想想到这是硬件的问题)。</p>
+
+<p>既然知道有可能是硬件的问题，我立刻问爸爸要来了一条新的线，结果就好了…对此我非常无语，因为折腾了很久…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/03/another-fresh-start/">Another Fresh Start</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-03T23:18:00+08:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近几天空间和域名都过期了，实在不想再续费那些php空间了，也不想再去折腾博客系统，于是就偷懒用Octopress了。其实我也不是对博客系统没有兴趣了，只是需要一个写文章的地方，于是就选择了这里。之前很早就听说过Octopress了，也看到非常非常多的人在用，但一直有自己的空间使得我不想去用，但实际上我也好久没有更新过空间了，现在空间没有了，心里不实在了，想快点找个能写东西的地方…</p>
+
+<p>我不打算把之前的文章搬到这里来了，这里就当作是我一个新的开始吧…</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/3/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/10/footprint-macau/">Footprint: Macau</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/06/shang-di-zhi-tou-zi-ma-%3F-liang-zi-wu-li-shi-hua/">Book Review: 上帝掷骰子吗？—量子物理史话</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/03/linear-space-and-euclidean-space/">Linear Space and Euclidean Space</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/01/the-definition-of-irrational/">The definition of irrational</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/31/translation-parler-a-mon-pere/">Translation: Parler à mon père</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/Aquietzero">@Aquietzero</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Aquietzero',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    <li class='category'><a href='/blog/categories/book-review/'>Book Review (2)</a></li>
+<li class='category'><a href='/blog/categories/express/'>Express (1)</a></li>
+<li class='category'><a href='/blog/categories/footprint/'>Footprint (1)</a></li>
+<li class='category'><a href='/blog/categories/french/'>French (3)</a></li>
+<li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (6)</a></li>
+<li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
+<li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
+<li class='category'><a href='/blog/categories/probability/'>Probability (1)</a></li>
+<li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
+<li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
+<li class='category'><a href='/blog/categories/translation/'>Translation (3)</a></li>
+<li class='category'><a href='/blog/categories/trivial/'>Trivial (1)</a></li>
+
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - zero -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'aquietzero';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
