@@ -9,8 +9,9 @@
   <meta name="author" content="zero">
 
   
-  <meta name="description" content="最近开始复习数学了，只可惜github上的markdown并不支持数学公式，所以有些总结估计还是得放在博客里，下面是效果： % <![CDATA[ \begin{align}
-\mbox{Union: } & A\cup B = \{x\mid x\in A \mbox{ or } x\in B &hellip;">
+  <meta name="description" content="最近在复习概率，在看到Stirling公式的时候，顺便看到了阶乘的积分形式，在此记录一下。 阶乘定义 我们最初接触阶乘的时候估计是使用如下定义： % <![CDATA[ f(n) =
+\begin{cases} 0 & , n = 0 \\ nf(n - 1) & , n > 0 \\
+\end{ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +82,129 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/16/the-integral-form-of-factorial/">The Integral Form of Factorial</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-16T11:36:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近在复习概率，在看到Stirling公式的时候，顺便看到了阶乘的积分形式，在此记录一下。</p>
+
+<h2 id="section">阶乘定义</h2>
+
+<p>我们最初接触阶乘的时候估计是使用如下定义：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+f(n) =
+\begin{cases}
+    0         & , n = 0 \\
+    nf(n - 1) & , n > 0 \\
+\end{cases}
+ %]]></script>
+
+<h2 id="section-1">阶乘积分定义</h2>
+
+<p>如果要寻找该公式对应的积分，那必须满足一下的条件（假设该积分为$F(n)$）：</p>
+
+<ol>
+  <li>当$n = 0$，$F(n) = 0! = 1$。</li>
+  <li>当$n \in \Bbb Z$，$F(n) = n!$。</li>
+  <li>当$n \notin \Bbb Z$，有$(\lfloor n \rfloor - 1)! &lt; F(n) &lt; \lceil n \rceil !$。</li>
+</ol>
+
+<p>为了满足上述条件，考虑下面的函数：</p>
+
+<script type="math/tex; mode=display">
+    F(n) = \int_x^{\infty} x^n e^{-x} \mathrm{d}x
+</script>
+
+<p>用分部积分，有：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
+        &= \lim_{x \to \infty} -x^n e^{-x} - n \int_0^{\infty} x^{n-1} e^{-x} \mathrm{d}x \\
+        &= nF(n - 1)
+\end{align}
+ %]]></script>
+
+<p>由此满足了其递归的定义，既然满足了递归的定义，那么当$n \in \Bbb Z$的时候，必然满足上面的条件2。根据函数图像，条件3也能够验证。对于第一点条件，有当$n = 0$的时候，我们有</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+    \int_0^{\infty} x^n e^{-x} \mathrm{d}x 
+        &= \int_0^{\infty} e^{-x} \mathrm{d}x \\
+        &= -\lim_{x \to \infty} e^{-x} + e^0 = 1
+\end{align}
+ %]]></script>
+
+<p>所以上述定义的函数$F(n)$确实是可以作为阶乘的积分定义的。</p>
+
+<h2 id="section-2">非整数阶乘</h2>
+
+<p>有了阶乘的积分定义以后，计算阶乘的时候就没有必要要求是整数了。比如计算$4.5!$，根据其阶乘的递归定义，我们有</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+4.5! 
+    &= 4.5 \times F(4.5 - 1) \\
+    &= 4.5 \times 3.5 \times F(3.5 - 1) \\
+    &= 4.5 \times 3.5 \times 2.5 \times F(2.5 - 1) \\
+    &= 4.5 \times 3.5 \times 2.5 \times 1.5 \times F(1.5 - 1) \\
+    &= 4.5 \times 3.5 \times 2.5 \times 1.5 \times F(0.5)
+\end{align}
+ %]]></script>
+
+<p>于是我们需要计算的就仅仅只有最后一项$F(0.5)$了。将其代入积分，同样使用分部积分法，我们有：</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align}
+    \int_0^{\infty} \sqrt{x} e^{-x} \mathrm{d}x 
+        &= 2 \int_0^{\infty} y^2 e^{-y^2} \mathrm{d}y \\ 
+        &= -\lim_{y \to \infty} y e^{-y^2} - \int_0^{\infty} e^{-y^2} \mathrm{d}y \\
+        &= \frac{\sqrt{\pi}}{2}
+\end{align}
+ %]]></script>
+
+<p>于是：</p>
+
+<script type="math/tex; mode=display">
+F(4.5) = 4.5 \times 3.5 \times 2.5 \times 1.5 \times \frac{\sqrt{\pi}}{2}
+</script>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -372,132 +496,6 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/27/framework-for-expressjs-and-client-side-js-mv-star-framwork/">Framework for Expressjs and Client-side Js MV* Framwork</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-27T16:00:00+08:00" pubdate data-updated="true">Sep 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>这段时间一直希望自己写一个单词学习的应用，因为过去用过太多的背单词软件，但是基本上都不符合我的学习规律，并没有能提高我学习外语的热情，鉴于这个学期希望好好学好法语，于是才有了这样的动力。</p>
-
-<h2 id="section">工具</h2>
-
-<p>我将其命名为<strong>Mnemon</strong>，项目详情可以参看<a href="https://github.com/Aquietzero/Mnemon">这里</a>。起名原因以及其含义相信读计算机的朋友们应该一目了然了。我希望完全用javascript来完成这个应用，所以采用如下组合：</p>
-
-<ul>
-  <li><strong>数据库：</strong> Mongodb</li>
-  <li><strong>服务器：</strong> Nodejs</li>
-  <li><strong>服务端框架：</strong> Express.js</li>
-  <li><strong>客户端框架：</strong> Ember.js</li>
-</ul>
-
-<h2 id="section-1">文件目录结构</h2>
-
-<p>由于这个项目才刚刚开始，这篇文章打算简单描述一下Mnemon的架构。</p>
-
-<h3 id="section-2">外层目录结构</h3>
-
-<p>下面是最外层的文件结构：</p>
-
-<pre><code>───┬─── client
-   ├─── config
-   ├─── doc 
-   ├─── lib 
-   ├─── public 
-   ├─── server 
-   ├─── index.js
-   ├─── package.json
-   ├─── README.md
-   └─── server.coffee
-</code></pre>
-
-<p>下面先简单讲述一下这个最外层的目录结构。最主要的两个文件夹分别是<code>client</code>和<code>server</code>，分别存放客户端和服务端的代码。<code>config</code>里面存放关于这个应用的服务端配置文件，<code>doc</code>存放相关文档，即开发日志，问题总结之类的文档。<code>lib</code>存放整个项目所用到的一些共用库。<code>index.js</code>则是整个应用的入口，其中包含了对<strong>coffeescript</strong>的支持，从这个文件开始的所有js文件实际上都是coffeescript来的。<code>package.json</code>描述了这个项目的包依赖。<code>server.coffee</code>则是真正意义上的应用入口，但是它是靠<code>index.js</code>来调用的。</p>
-
-<h3 id="section-3">客户端目录结构</h3>
-
-<p>下面详细看看这些目录里面的内容，首先是客户端的：</p>
-
-<pre><code>client
-  └───┬── coffee 
-      │     ├── models 
-      │     ├── controllers 
-      │     └── views
-      ├── css 
-      ├── js 
-      ├── libs 
-      └── index.html
-</code></pre>
-
-<p>客户端里面放的实际上是一整个分离的客户端代码，<code>index.html</code>是客户端的入口，<code>libs</code>里面放着客户端所需要的库，由于我这个应用客户端的框架用的是<strong>Ember.js</strong>，于是这里面就放着与<strong>Ember.js</strong>相关的库。<code>css</code>是整个客户端的样式代码。在<code>coffee</code>里面则放着客户端最核心的代码，即MVC的代码，其后会被编译成对应的javascript，最后在<code>index.html</code>里面引用的也就是这些编译好的javascript代码。</p>
-
-<h3 id="section-4">服务端目录结构</h3>
-
-<p>接下来看看服务端的代码：</p>
-
-<pre><code>server 
-  └───┬── assets 
-      │     ├── javascripts 
-      │     └── stylesheets 
-      ├── controllers 
-      ├── models
-      ├── views 
-      └── helpers
-</code></pre>
-
-<p>服务器端其实代码结构跟客户端也没有太大的差别，实际上大家都是MVC结构嘛。这样的目录结构实际上是参照rails的目录结构来构建的。但是这里的<code>javascript</code>以及<code>stylesheet</code>实际上是服务端渲染页面的代码，这个是需要注意的。</p>
-
-<h2 id="section-5">配置以及启动</h2>
-
-<p>然后最重要的，各部分的桥梁可以说是<code>config</code>文件夹了：</p>
-
-<pre><code>config 
-  └───┬── config.coffee 
-      ├── db.coffee
-      └── routes.coffee
-</code></pre>
-
-<p>其中<code>config.coffee</code>是进行express的各种配置工作，比如静态路径，比如根目录，比如端口号之类。<code>db.coffee</code>主要是对数据库进行链接。<code>routes.coffee</code>就是路由映射了。</p>
-
-<p><strong>这样的应用有点特别之处，那就是为什么要专门分开客户端和服务端两个部分呢？正是因为在客户端使用了MVC的框架。在客户端使用了MVC框架意味着客户端自己有一套私有的路由，那是用来控制客户端行为的状态转换的，这样实际上跟服务端就发生了冲突，因为客户端的逻辑不用经过服务端就能跳转了。</strong>既然如此，我们就干脆将它们分开，既然客户端逻辑那么重，我们的服务端就干脆只提供服务好了，让客户端的MVC来自己处理跳转逻辑。这样，当客户端需要信息的时候，就直接用异步的方式向服务器请求，请求还是遵循REST的风格，这样express也不至于没有用。</p>
-
-<p>将客户端以及服务端分开需要两处启动。服务端直接用如下的命令启动：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="sh"><span class="line">sudo mongod
-</span><span class="line">node index
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>客户端可以放在web根目录下，如果是本地应用的话也可以开python的服务器，这样打开客户端里面的<code>index.html</code>即可访问应用。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -515,6 +513,10 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/19/chao-yue-shi-kong/">Book Review: 超越时空</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/10/footprint-macau/">Footprint: Macau</a>
       </li>
     
@@ -528,10 +530,6 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
     
       <li class="post">
         <a href="/blog/2012/11/01/the-definition-of-irrational/">The definition of irrational</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/31/translation-parler-a-mon-pere/">Translation: Parler à mon père</a>
       </li>
     
   </ul>
@@ -569,7 +567,7 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
 <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/book-review/'>Book Review (2)</a></li>
+    <li class='category'><a href='/blog/categories/book-review/'>Book Review (3)</a></li>
 <li class='category'><a href='/blog/categories/express/'>Express (1)</a></li>
 <li class='category'><a href='/blog/categories/footprint/'>Footprint (1)</a></li>
 <li class='category'><a href='/blog/categories/french/'>French (3)</a></li>
