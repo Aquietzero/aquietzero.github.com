@@ -9,9 +9,7 @@
   <meta name="author" content="zero">
 
   
-  <meta name="description" content="最近听到一首Celine Dion的歌，非常喜欢其舌音，在此分享一下。 Je voudrais oublier le temps 我希望忘却时间
-Pour un soupir pour un instant 为了暂时的歇息
-Une parenthèse après la course &hellip;">
+  <meta name="description" content="最近在读《数学是什么》，再次碰到了有关数的一些问题。这令我回想起大一时候所学的高数，以及当时所看的《从一到无穷大》里面说到的一些问题。印象最深刻的要数实数的定义了。还记得当初初中的时候就接触过如下的定义： 有理数就是有限或无限循环小数，无理数就是无限不循环小数。 其实一直到大学， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +80,75 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/01/the-definition-of-irrational/">The Definition of Irrational</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-01T11:38:00+08:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近在读《数学是什么》，再次碰到了有关数的一些问题。这令我回想起大一时候所学的高数，以及当时所看的《从一到无穷大》里面说到的一些问题。印象最深刻的要数<strong>实数的定义</strong>了。还记得当初初中的时候就接触过如下的定义：</p>
+
+<blockquote>
+  <p>有理数就是有限或无限循环小数，无理数就是无限不循环小数。</p>
+</blockquote>
+
+<p>其实一直到大学，我都觉得这个定理没什么特别，理所当然地将其接受了。但是无可否认，这个定义是有缺陷的。因为我们是从十进制的角度来对其作出定义(因为有理数可以表示为有理分式，如$a/b$，那么将其化为小数的时候，毫无疑问做了十进制的除法)，这就相当与这个定义与十进制挂钩了。由于十进制系统并非显示事物本质的唯一方式，所以才希望给出一个更为一般的定义。</p>
+
+<h2 id="section">区间套定义</h2>
+
+<p>我们把全体无限小数称为<strong>数的连续统(continuum)</strong>，或<strong>实数系</strong>，这就是有理数跟无理数的统称。为了抛开进制来对其进行定义，引入了区间套的概念。</p>
+
+<blockquote>
+  <p>让我们考虑数轴上任意一串以有理点为端点的区间$I_1, I_2, \cdots, I_n, \cdots$，它们的每一个包含在前一个里面，且使得当$n$增大时，第$n$个区间$I_n$的长度趋向于0，这样的一列区间称为一组<strong>区间套</strong>。<strong>对应于每一组这样的区间套，在数轴上恰有一个点包含在所有的这些区间中。</strong></p>
+</blockquote>
+
+<p>根据定义，这个<strong>点</strong>(各个区间套的公共点)就称为实数，如果这个不是有理点，就称之为<strong>无理数</strong>。</p>
+
+<p>这个定义简洁明了，如果$n$是有理数的话，那么它必定会无限靠近于那些有理区间的某一个端点，也有可能就是某个有理区间的端点；如果它是无理数，那么就将需要无限个区间套了，并且它不会靠近那些区间套的左端点或者右端点，而是有可能在两个端点之间波动。<strong>从纯粹形式的观点来看，首先，我们可以在直线上只作出有理点，然后，定义一个无理点是某个有理端点区间套的一个符号，一个无理点完全由长度趋于零的有理端点区间套来描述。</strong>这实际上是说，我们并不能直观地看到线段上的无理点，但是我们知道它的存在(如$\sqrt 2$等)，于是我们就通过用我们所能观察到的(有理点)对这些我们不能观察到的但是却又存在的数进行定义，使之具有的数学性质方便我们能像操纵有理数那样操纵它们(如基本四则运算，大小比较关系等)。这实质上已经对有理数域进行了推广。</p>
+
+<h2 id="dedekind">Dedekind分割</h2>
+
+<p>还有一种对对无理数的定义，它是由德国数学家Dedekind提出的。</p>
+
+<blockquote>
+  <p>假设给定某种方法，把<strong>全体有理数集</strong>分为两类$A$和$B$，使得$B$类的每一个元素$b$都大于$A$类的每一个元素$a$。任何一个这种分类称为有理数集的一个<strong>分割</strong>，记为$A|B$。对于一个分割恰有三中可能，其中<strong>有且只有一种必定成立</strong>：
+<br />
+<br />
+1) $A$有一个最大元素$a^*$。例如$A$是所有$\leq 1$的有理数，而$B$是所有$\gt 1$的有理数。<br />
+2) $A$有一个最小元素$b^*$。例如$A$是所有$\lt 1$的有理数，而$B$是所有$\geq 1$的有理数。<br />
+3) $A$中没有最大元素且$B$中也没有最小元素。</p>
+</blockquote>
+
+<p>在第三种情况中，Dedekind称这种分割定义了一个无理数，或简单地说这种分割就是一个无理数。这种分割的定义和用区间套所作出的定义是一致的。扩充有理数域至实数域的直接意义在于，至此，实数与数轴上的点的一一对应关系就建立起来了。这是从高中课本中给出的，但是其中还有如此神乎其神的定义，确实开了不少眼界。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -478,121 +545,6 @@ c(\vec{A} \cdot \vec{B}) = (c \vec{A}) \cdot \vec{B} = \vec{A} \cdot (\overline{
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/16/an-interesting-probability-problem-n-persons-in-a-circle/">An Interesting Probability Problem: N Persons in a Circle</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-16T17:00:00+08:00" pubdate data-updated="true">Oct 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今天看到了一道有趣的题目：</p>
-
-<blockquote>
-  <p>若n个人站成一排，其中有A，B两人，问夹在A和B之间恰好有r个人的概率是多少？如果他们不是站在一排，而是站在一圈，那结果又是如何呢？</p>
-</blockquote>
-
-<p>对于前一个问，解起来并不是太难，只要细心一点一般不会做错。其中n个人排成一排，总的排列数是$n!$，然后考虑为了促成上面描述的状况经过了什么步骤。</p>
-
-<ol>
-  <li>
-    <p>首先当然是从n个人里面选出r个(记住除去A和B)，让其排在A和B的中间，注意，选出r个人以后还得对其进行排列，所以有</p>
-
-<script type="math/tex; mode=display">
- \dbinom{n-2}r r!
- </script>
-  </li>
-  <li>
-    <p>然后要对剩下的人进行排列，于是有$(n-r-2)!$种排法，排完以后还必须将他们分成两部分排在A的左边和B的右边，这样就有$(n-r-1)$种分法，极端情况是全部排在一边。这样与步骤1结合起来，就有下面的排列数：</p>
-
-<script type="math/tex; mode=display">
- \dbinom{n-2}r r! (n-r-1)!
- </script>
-  </li>
-  <li>
-    <p>最后，将A和B位置交换又能得到一组对称的排列，所以总概率为：</p>
-
-<script type="math/tex; mode=display">
- P = \frac{2 \dbinom{n-2}r r! (n-r-1)!}{n!}
- </script>
-  </li>
-</ol>
-
-<p>稍微将其化简，有：</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-
-\begin{align}
-P 
-    &= \frac{2 \dbinom{n-2}r r! (n-r-1)!}{n!} \\
-    &= \frac{2r!(n-r-1)!}{n!} \frac{(n-2)!}{r!(n-r-2)!} \\
-    &= \frac{2(n-r-1)}{n(n-1)}
-\end{align}
- %]]></script>
-
-<p>接着考虑第二问。在第二问中，n个人再也不是排成一排了，所以其总排列数会有所变化。观察下面的排列：</p>
-
-<script type="math/tex; mode=display">
-p_1, p_2, p_3, \dotsc p_n
-</script>
-
-<p>注意到，当n个人排成一圈以后，本来在排成一排的时候出现的排列会重复，比如：</p>
-
-<script type="math/tex; mode=display">
-p_2, p_3, \dotsc p_n, p_1 \\
-p_3, \dotsc p_n, p_1, p_2
-</script>
-
-<p>等等的排列都是重复的，重复次数为n。比如排成一个圈以后排列数是P，那么这P个排列中，每一个排列都会在排成一排的情况中衍生出n种不同的排列，所以排成一个圈的排列数刚好是排成一排的排列数的$1/n$，所以其总排列数为$(n-1)!$。</p>
-
-<p>之后的计算其实跟第一问比较相似，就是有一点点不一样而已。由于方向是从A到B，所以A与B之间的人还是需要排序的。从$n-2$个人里面抽出r个人，并对他们进行排列：</p>
-
-<script type="math/tex; mode=display">
-\dbinom{n-2}r r!
-</script>
-
-<p>然后还要对剩下的人进行排列，即$(n-r-2)!$，但是跟第一问不同的是，这些人并不需要分成两个部分了。因为大家都排成一个圈，他们总是连在一起的。<strong>再有一点比较重要的，那就是A和B即使调换位置也没有增加什么排列，那是因为A到B有序，并且圈是循环的，所以那r个人的位置相对于A和B来说是不变的，即时A和B交换了位置，那么那r个人的位置也是会反过来的。</strong>这样就有如下的概率：</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-
-\begin{align}
-P 
-    &= \frac{\dbinom{n-2}r r! (n-r-2)!}{(n-1)!} \\
-    &= \frac{(n-2)!}{r!(n-r-2)!} \frac{r!(n-r-2)!}{(n-1)!} \\
-    &= \frac{1}{n-1}
-\end{align}
- %]]></script>
-
-<p>可以看出最后的概率是跟r一点关系都没有的，乍一看有点神奇，其实认真想想，还有一个 更为简便的方法来解决这个问题。这个问题的第二问可以转化为：B出现在从A数起的第r+1个位置的概率。</p>
-
-<p>由于大家排成一个圈，所以A的位置并不重要，但是B必须和A相隔r个人，而这个位置是确定的，那就相当与要在$n-1$个位置里面挑一个，那当然，挑中这个位置的概率就是$1/(n-1)$了。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -610,6 +562,10 @@ P
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/29/fei-zheng-chang-mang-lu/">非正常忙碌</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/19/chao-yue-shi-kong/">Book Review: 超越时空</a>
       </li>
     
@@ -623,10 +579,6 @@ P
     
       <li class="post">
         <a href="/blog/2012/11/03/linear-space-and-euclidean-space/">Linear Space and Euclidean Space</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/01/the-definition-of-irrational/">The definition of irrational</a>
       </li>
     
   </ul>
@@ -668,7 +620,7 @@ P
 <li class='category'><a href='/blog/categories/express/'>Express (1)</a></li>
 <li class='category'><a href='/blog/categories/footprint/'>Footprint (1)</a></li>
 <li class='category'><a href='/blog/categories/french/'>French (3)</a></li>
-<li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
+<li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
 <li class='category'><a href='/blog/categories/math/'>Math (6)</a></li>
 <li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
 <li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
@@ -677,7 +629,7 @@ P
 <li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
 <li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
 <li class='category'><a href='/blog/categories/translation/'>Translation (3)</a></li>
-<li class='category'><a href='/blog/categories/trivial/'>Trivial (1)</a></li>
+<li class='category'><a href='/blog/categories/trivial/'>Trivial (2)</a></li>
 
   </ul>
 </section>

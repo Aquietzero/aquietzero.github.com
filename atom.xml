@@ -4,7 +4,7 @@
   <title><![CDATA[Null Space]]></title>
   <link href="http://Aquietzero.github.com/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-11-21T23:27:20+08:00</updated>
+  <updated>2012-11-29T00:43:14+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[非正常忙碌]]></title>
+    <link href="http://Aquietzero.github.com/blog/2012/11/29/fei-zheng-chang-mang-lu/"/>
+    <updated>2012-11-29T00:40:00+08:00</updated>
+    <id>http://Aquietzero.github.com/blog/2012/11/29/fei-zheng-chang-mang-lu</id>
+    <content type="html"><![CDATA[<p>最近处于非正常忙碌状态，各种烦恼…</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Book Review: 超越时空]]></title>
@@ -28,7 +37,7 @@
 
 <h2 id="section">有关学习</h2>
 
-<p>似乎每次看完书都会带给我一些学习上的思考。</p>
+<p>似乎每次看完书都会带给我一些学习上的思考，而这往往是首当其冲的。</p>
 
 <p>自从上次看完《上帝掷骰子吗？—量子物理史话》以后，我就立刻有了复习并继续学习数学物理的冲动了。其实这也不仅仅是看完书的头脑发热，而是激起了我一直犹豫不决的决定。因为选择了保研的缘故，我现在可以说是有比较多的空闲时间的，为了以后能更好地驾驭技术，我觉得数学必不可少。但是由于个人的惰性，一直没有什么能唤起我拿起那些大一的数学书来复习。而那本量子物理史话就正正充当了这个角色。自从十一月以来，我开始复习线性代数以及高等数学，顿时发现自己以前确实对某些概念一知半解，甚至混淆，这些都会以博文的形式记录，这里就不多说了。</p>
 
@@ -1425,36 +1434,6 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
 <p>变换2，5，6位置以后天平倾斜方向改变，则可以断定坏蛋在2，5，6里面，其判断方法跟上面是一样的。最后还有一种情况，那就是拿走了3，4以后，天平保持平衡，那么很明显，3，4里面就有一只坏蛋了，判断方法可以用最开始的方法。当然也可以直接称3和4，因为如果1，2，3，4那边本来比较重的话，那么3，4之中比较重的是坏蛋，反之就是更轻的为坏蛋。</p>
 
 <p>这是一道非常有趣的题目，用编号加上逻辑推理来减少称量次数，为此记录一下。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dual Monitors in Ubuntu]]></title>
-    <link href="http://Aquietzero.github.com/blog/2012/08/06/dual-monitors-in-ubuntu/"/>
-    <updated>2012-08-06T12:38:00+08:00</updated>
-    <id>http://Aquietzero.github.com/blog/2012/08/06/dual-monitors-in-ubuntu</id>
-    <content type="html"><![CDATA[<p>家里的台式机实在用了太久了，终于在上周走到了生命的尽头。其实坏掉的就只有主机而已，显示器还是非常好的，色彩非常鲜艳美丽。之前一直嫌手提屏幕太小，无论是写代码还是建模，图像处理之类的都非常非常不方便，希望有一个大大的显示器来满足我这些愿望。随着家里的台式电脑的报废，我这个愿望终于得以了实现。</p>
-
-<p>其实在ubuntu上面搞双显示器应该是非常简单的，接线，打开nvidia控制面板进行设置就可以了。但我的ubuntu总是那么的多灾多难，之前就因为识别不了新买的wacom手写板而使我欲望全无。当我接线以后，nvidia控制面板“似乎”识别到了我的三星显示器，但是分辨率却没有合适的，我选择了一个比较接近的分辨率，结果屏幕是扩展了，但是效果并不好。当然，都不是其原生的最佳分辨率，效果当然不好。</p>
-
-<p>我一开始以为外接屏幕的分辨率是受限于手提的屏幕分辨率的，比如手提的分辨率为<code>1366x768</code>，那么外接显示器的纵向分辨率就不能超过<code>768</code>。对于对显示要求很高的我来说，这样的效果是绝对看不顺眼的，忍了一两个小时以后，我开始搜索，问人，后来发现两者的分辨率是可以不一致的，都是可以达到最佳的分辨率。接着就是疯狂的搜索了。</p>
-
-<p>既然没有可选的分辨率，那么就为其添加，这是最基本的思路，于是搜到一大堆的结果，基本上都是说在<code>/etc/X11/xorg.conf</code>里面添加字段来说明，但是这种方法对我的电脑并不适用，修改了以后连X都不能进入了。进入recovery模式修改回来以后又能进去了，于是我抛弃了这种办法。</p>
-
-<p>紧接着，我搜到了<code>xrandr</code>，这条命令不带参数时的作用是列出已经识别出的显示器及其名字，可选分辨率。我得到的结果是</p>
-
-<pre><code>xrandr: Failed to get size of gamma for output default
-</code></pre>
-
-<p>这个反馈给我的第一个反映就是我的三星显示器根本就没有被识别到。我对这个结果进行了搜索，结果发现很多人碰到了这个问题，问题出于外接显示器的<code>EDID</code>没有被识别到。天啊，于是紧接着我搜到<code>read-edid</code>这个工具可以读取<code>EDID</code>，下了工具以后希望有所帮助。于是我使用命令<code>sudo get-edid | parse edid</code>来进行<code>EDID</code>的获取及识别工作，结果又出乎我意料</p>
-
-<pre><code>The EDID data should not be trusted as the VBE call failed
-Error: output block unchanged
-</code></pre>
-
-<p>看到这样的结果心都碎了，这已经是我能搜到的方法了，基本上全部方法的第一步都不成功。于是我打开<code>/var/log/Xorg.0.log</code>，发现根本就是识别不到显示器的，这时候我才想到有可能是硬件的问题(显然，前面的那些方法都迷惑了我，以至于我没有一开始就考虑硬件的问题。不过这也很难说，因为我的双显示器是工作的，只是分辨率不对而已，我根本就没有想想到这是硬件的问题)。</p>
-
-<p>既然知道有可能是硬件的问题，我立刻问爸爸要来了一条新的线，结果就好了…对此我非常无语，因为折腾了很久…</p>
 ]]></content>
   </entry>
   
