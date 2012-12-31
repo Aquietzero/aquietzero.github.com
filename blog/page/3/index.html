@@ -9,7 +9,8 @@
   <meta name="author" content="zero">
 
   
-  <meta name="description" content="今天看到了一道有趣的题目： 若n个人站成一排，其中有A，B两人，问夹在A和B之间恰好有r个人的概率是多少？如果他们不是站在一排，而是站在一圈，那结果又是如何呢？ 对于前一个问，解起来并不是太难，只要细心一点一般不会做错。其中n个人排成一排，总的排列数是$n!$， &hellip;">
+  <meta name="description" content="向量空间$\Bbb R^n$实际上可以扩充到复数域，从而推广到复数向量空间$\Bbb C^n$。与$\Bbb R^n$类似，对于$\Bbb C^n$我们有 \vec{A} = \vec{B} \Leftrightarrow i = 1, 2, \cdots, n, a_i = b_i, \\
+\ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +81,141 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/23/vector-space-of-complex-n-tuple/">Vector Space of Complex N-tuple</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-23T20:23:00+08:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>向量空间$\Bbb R^n$实际上可以扩充到复数域，从而推广到复数向量空间$\Bbb C^n$。与$\Bbb R^n$类似，对于$\Bbb C^n$我们有</p>
+
+<script type="math/tex; mode=display">
+\vec{A} = \vec{B} \Leftrightarrow i = 1, 2, \cdots, n, a_i = b_i, \\
+\vec{A} + \vec{B} = (a_1 + b_1, \cdots, a_n + b_n), \\
+c\vec{A} = (ca_1, \cdots, ca_n).
+</script>
+
+<p>其中上面的常量$a_i, b_i, c$都是复数，由此我们得到了<strong>复n维空间</strong>，记为$\Bbb C^n$。</p>
+
+<p>有很多关于$\Bbb R^n$的定理都可以原封不动地移植到$\Bbb C^n$上，不过与点积有关的定理仍需要进行修正，我们用不全为0的实数的平方和为正这一事实来证明非零向量与自己的点积为正，<strong>由于复数的平方和有可能为负，为了保留正定性，我们必须修改点积的定义。</strong></p>
+
+<h2 id="n">复n维空间的点积定义</h2>
+
+<p>设$\vec{A} = (a_1, \cdots, a_n), \vec{B} = (b_1, \cdots, b_n)$为$\Bbb C^n$中的两个向量，我们用如下的公式来定义它们的点积$\vec{A} \cdot \vec{B}$：</p>
+
+<script type="math/tex; mode=display">
+\vec{A} \cdot \vec{B} = \sum^n_{k=1} a_k \overline{b_k} 
+</script>
+
+<p>其中$\overline{b_k}$是$b_k$的共轭复数。</p>
+
+<p>根据这样的定义，就有一些定理需要修正了，比如：</p>
+
+<script type="math/tex; mode=display">
+\vec{A} \cdot \vec{B} = \overline{ \vec{B} \cdot \vec{A} }, \\
+c(\vec{A} \cdot \vec{B}) = (c \vec{A}) \cdot \vec{B} = \vec{A} \cdot (\overline{c} \vec{B}).
+</script>
+
+<p>这些都是显而易见的推广，在此就不证明了。</p>
+
+<h2 id="section">一些例子</h2>
+
+<p><strong>1. 证明：对$\Bbb C^n$中任意两个向量$\vec{A}$和$\vec{B}$，有恒等式</strong></p>
+
+<script type="math/tex; mode=display">
+\| \vec{A} + \vec{B} \|^2 = 
+    \| \vec{A} \|^2 + \| \vec{B} \|^2 + 
+    \vec{A} \cdot \vec{B} + 
+    \overline{ \vec{A} \cdot \vec{B} }
+</script>
+
+<p>证：令$\vec{C} = \vec{A} + \vec{B}$，于是有</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+
+\eqalign{
+    \| \vec{A} + \vec{B} \|^2 
+    &= \|\vec{C}\| \cdot \|\vec{C}\| \\
+    &= \sum^n_{k=1} c_k \overline{c_k} \\
+    &= \sum^n_{k=1} (a_k + b_k)(\overline{a_k} + \overline{b_k}) \\
+    &= \sum^n_{k=1} (a_k \overline{a_k} + a_k \overline{b_k} + b_k \overline{a_k} + b_k \overline{b_k}) \\
+    &= \|\vec{A}\|^2 + \|\vec{B}\|^2 + \vec{A} \cdot \vec{B} + \vec{B} \cdot \vec{A} \\
+    &= \|\vec{A}\|^2 + \|\vec{B}\|^2 + \vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}
+}
+ %]]></script>
+
+<p><strong>2. 证明：对于$\Bbb C^n$中的任意两个向量$\vec{A}$和$\vec{B}$，$\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}$是实数。</strong></p>
+
+<p>证：由定义有</p>
+
+<script type="math/tex; mode=display">
+\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}} = \sum^n_{k=1} (a_k \overline{b_k} + \overline{a_k} b_k)
+</script>
+
+<p>令$a_k = x_{ak} + y_{ak} \jmath, b_k = x_{bk} + y_{bk} \jmath$，代入上式，即可算得其虚部系数为0，所以上式的结果必然是实数。 </p>
+
+<h2 id="n-1">复n维空间的夹角问题</h2>
+
+<p>为了对夹角公式进行修正，在复n维空间中，两个向量之间的夹角有如下定义：</p>
+
+<script type="math/tex; mode=display">
+\cos \theta = \frac{\vec{A} \cdot \vec{B} + \overline{\vec{A} \cdot \vec{B}}}{2\|\vec{A}\|\|\vec{B}\|}
+</script>
+
+<p>当然，这样定义的原因之一在于，上式右端的值域符合$\cos \theta$的值域，再有则是根据$\Bbb R^n$上的公式$\cos \theta = \frac{\vec{A} \cdot \vec{B}}{|\vec{A}||\vec{B}|}$变形而来，下面简单证明一下值域相等的问题。</p>
+
+<p>由Cauchy-Schwarz不等式有</p>
+
+<script type="math/tex; mode=display">
+| \vec{A} \cdot \vec{B} |^2 \leq (\vec{A} \cdot \vec{A})(\vec{B} \cdot \vec{B})
+</script>
+
+<p>对其两端开方，有</p>
+
+<script type="math/tex; mode=display">
+-\|\vec{A}\|\|\vec{B}\| \leq 
+\vec{A} \cdot \vec{B} \leq 
+\|\vec{A}\|\|\vec{B}\|
+</script>
+
+<p>同理，有$\vec{B} \cdot \vec{A} = \overline{\vec{A} \cdot \vec{B}}$</p>
+
+<script type="math/tex; mode=display">
+-\|\vec{A}\|\|\vec{B}\| \leq 
+\overline{\vec{A} \cdot \vec{B}} \leq 
+\|\vec{A}\|\|\vec{B}\|
+</script>
+
+<p>两式相加即可证得其值域为$\lbrack -1, 1 \rbrack$。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -412,103 +548,6 @@ F(4.5) = 4.5 \times 3.5 \times 2.5 \times 1.5 \times \frac{\sqrt{\pi}}{2}
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/03/translation-juste-une-photo-de-toi/">Translation: Juste Une Photo De Toi</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-03T13:48:00+08:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>这两天听到一首比较有感觉的歌，歌手没有什么特别，但是音乐感觉不错。</p>
-
-<pre><code>Juste une photo de toi [Pokara]
-
-Si on faisait un flash-back 如果我们能回到过去
-On revenait en arrière 那么就让我们回到从前
-Pour te rappeller ce qu'tu me disais 让你回忆起你跟我说过的话
-Qu'on resterait ensemble jusqu'à redevenir poussières 你说我们会一直厮守，直到化为尘土
-Au final tout ça se n'était que des paroles en l'air 可到了最后，所有的这一切仅仅是虚无飘渺的诺言罢了
-Et j'ai pas vu que tu jouais 我并没有看到你在玩
-Toute cette histoire un jeu d'échecs dont tu étais la reine 但你却是棋盘上的皇后
-Ohohoh 噢噢噢
-
-J'ai l'coeur en vrac et 我心乱如麻
-Si je dérape c'est  如果我出什么差错
-Parce que t'es parti, aussi vite que t'es arrivée 那是因为你来去匆匆
-Et tu t'en es allée avec un bout de moi 你的离开使我残缺不全
-Maintenant 现在
-
-Tout ce qu'il me reste 我所剩下的
-C'est juste une photo de toi 就只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Tout ce que tu m'laisse 你留下来给我的
-C'est juste une photo de toi 就只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Na Na Na Na Na Na Na Na Na Na Na 不不不不不不不不
-
-La musique qui s'arrête 音乐停止了
-Le rideau qui se baisse 帷幕降下了
-Et mon sourire disparait quand les lumières s'éteignent 舞台灯光熄灭的瞬间，我的笑容也消逝了
-Même les applaudissements ne pourront rien y faire 甚至那里的掌声也戛然而止了
-Et pour toi j'étais prêt à remuer ciel et terre 为了你我都做好了上天下地的准备
-Mais t'as pas vu tout c'que j'ai fais  但是我做得一切对你来说都形同虚设
-J'ai perdu ma bataille il n'y a plus rien à faire 我已经输了，再也没有什么可以做了
-Ohohoh 噢噢噢
-
-J'ai l'coeur en vrac et 我心乱如麻
-Si je dérape c'est  如果我出什么差错
-Parce que t'es parti, aussi vite que t'es arrivée 那是因为你来去匆匆
-Et tu t'en es allée avec un bout de moi 你的离开使我残缺不全
-Maintenant 现在
-
-Tout ce qu'il me reste 我所剩下的
-C'est juste une photo de toi 就只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Tout ce que tu m'laisse 你留下来给我的
-C'est juste une photo de toi 就只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Juste une photo de toi 只有一张你的照片
-Na Na Na Na Na Na Na Na Na Na Na 不不不不不不不不
-
-Maintenant je maudit le jour où j't'ai rencontrer 现在，我抱怨我们相遇的那一天
-J'aurai pas dû te regarder 当时，我不应该看着你
-Si t'es plus là 如果你已经不在了
-Tout ces souvenirs qu'est-ce que j'en fais 那么我留着你的记忆干什么呢？
-Je veux juste t'oublier 我只想把你忘记
-
-[REFRAIN]
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -526,6 +565,10 @@ Je veux juste t'oublier 我只想把你忘记
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/31/summary-of-2012/">Summary of 2012</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/29/fei-zheng-chang-mang-lu/">非正常忙碌</a>
       </li>
     
@@ -539,10 +582,6 @@ Je veux juste t'oublier 我只想把你忘记
     
       <li class="post">
         <a href="/blog/2012/11/06/shang-di-zhi-tou-zi-ma-liang-zi-wu-li-shi-hua/">Book Review: 上帝掷骰子吗？—量子物理史话</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/03/linear-space-and-euclidean-space/">Linear Space and Euclidean Space</a>
       </li>
     
   </ul>
@@ -584,7 +623,7 @@ Je veux juste t'oublier 我只想把你忘记
 <li class='category'><a href='/blog/categories/express/'>Express (1)</a></li>
 <li class='category'><a href='/blog/categories/footprint/'>Footprint (1)</a></li>
 <li class='category'><a href='/blog/categories/french/'>French (3)</a></li>
-<li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
+<li class='category'><a href='/blog/categories/life/'>Life (4)</a></li>
 <li class='category'><a href='/blog/categories/math/'>Math (6)</a></li>
 <li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
 <li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
@@ -593,7 +632,7 @@ Je veux juste t'oublier 我只想把你忘记
 <li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
 <li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
 <li class='category'><a href='/blog/categories/translation/'>Translation (3)</a></li>
-<li class='category'><a href='/blog/categories/trivial/'>Trivial (2)</a></li>
+<li class='category'><a href='/blog/categories/trivial/'>Trivial (3)</a></li>
 
   </ul>
 </section>
