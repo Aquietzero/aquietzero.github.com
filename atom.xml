@@ -4,7 +4,7 @@
   <title><![CDATA[Null Space]]></title>
   <link href="http://Aquietzero.github.com/atom.xml" rel="self"/>
   <link href="http://Aquietzero.github.com/"/>
-  <updated>2012-12-31T23:49:01+08:00</updated>
+  <updated>2013-05-09T11:52:59+08:00</updated>
   <id>http://Aquietzero.github.com/</id>
   <author>
     <name><![CDATA[zero]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Translation: L'innocence]]></title>
+    <link href="http://Aquietzero.github.com/blog/2013/05/09/translation-innocence/"/>
+    <updated>2013-05-09T11:47:00+08:00</updated>
+    <id>http://Aquietzero.github.com/blog/2013/05/09/translation-innocence</id>
+    <content type="html"><![CDATA[<p>今天在百度百科回答问题，看到一条翻译歌曲的题目，本身已被几个月没碰法语的良心所责备，由于看到歌曲比较简单，于是联系了一把。这是Jonatan Cerrada的一首短歌《L’innocence》，由于有些地方希望用四字表述，所以可能有些词不达意了…</p>
+
+<pre><code>J'entre dans la lumière || 顾影随步，步入微光
+Indécis vers ce mystère || 徘徊不定，走向未知
+La peur qu'il m'avale || 摄魂恐惧，将我吞噬
+Sans aucun effort || 孤立无援
+Que je me perde || 自我迷失
+Dans son corps || 于它之躯
+
+Et 
+j'avance sans rien connaître || 茫然不知，迈步前行
+De cette vie qui vient de naître || 从此一生，当即诞生
+
+J'avance avec l'espoir || 满怀希冀，迈步前行
+Que rien ne freinera mon départ || 全速前行，不再回首
+La peur qu'un matin tout soit oublié || 终有一朝，恐惧湮灭
+Qu'un jour le tableau soit effacé || 终有一日，画卷淡褪
+
+Et j'avance sans rien connaître || 茫然不知，迈步向前
+De cette vie qui vient de naître || 从此一生，当即诞生
+Dans cet univers que j'ai choisi || 于吾之向，苍茫宇宙
+Au moment où je quitte l'innocence || 于此一瞬，吾之蜕变
+
+Dans ce monde encore inconnu || 置身于此，未知世界
+Je me noie et je suis perdu || 自我浸淫，自我迷失
+Mais... || 但是
+Mais j'y crois encore || 依然坚信
+Les matins où je ne sais plus || 无数令吾迷茫之清晨
+Les promesses faites et non tenue || 无数未曾兑现之诺言
+Font de moi quelqu'un de plus fort. || 将吾之身，将吾之意，挫之愈坚，铸之愈强
+Dans cet univers qui m'a choisi || 于吾之向，苍茫宇宙
+Au moment où je perds l'innocence || 于此一瞬，吾之蜕变
+
+Et j'avance sans rien connaître || 茫然不知，迈步向前
+De cette vie qui vient de naître || 从此一生，当即诞生
+Et j'avance sans faux paraître || 昂首阔步，坚定前行
+Dans cet univers que j'ai choisi || 于吾之向，苍茫宇宙
+Au moment où je lâche l'innocence || 于此一瞬，吾之蜕变
+L'enfance || 追忆童年
+L'enfance… || 美好童年...
+</code></pre>
+
+<p>其中的<code>quitter l'innocence</code>本意应为<code>失去天真</code>之类，但我将其译为<code>蜕变</code>了，起到跟<code>成长</code>同义。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Summary of 2012]]></title>
@@ -1194,213 +1245,6 @@ Que je mène chaque jour ce drôle de combat 我每天才那么可笑地纠结�
 <p>除了这两条主线以外，还有一些琐碎的项目，但是这些基本上都是没有头没有尾的，例如上面说到的像素风格贪吃蛇，这个小游戏仅仅写了一个下午，但是我觉得这个东西可以做下去的方向挺多，也挺吸引，但是却没有继续了，或者在未来会继续。另外，本来还希望写一个3D的数据可视化，但是后来发现需要的知识和时间是挺多的，所以为了保证物理引擎的进度，也还是暂停了。还有一些比较小的，这里就不说了。</p>
 
 <p>总的来说，这个暑假还是算充实，但由于编码太多，或许真正学到的没有太多，不过我觉得无论在架构方面还是在数学方面都有了不同程度的提高。接下来努力的方向估计还是继续打好数学的基础了，毕竟那才是研究所需的坚实后盾。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[On NodeJs Modules]]></title>
-    <link href="http://Aquietzero.github.com/blog/2012/09/11/on-nodejs-modules/"/>
-    <updated>2012-09-11T10:18:00+08:00</updated>
-    <id>http://Aquietzero.github.com/blog/2012/09/11/on-nodejs-modules</id>
-    <content type="html"><![CDATA[<p>对于Node的初学者来说，可能对模块化方面比较模糊，网上的资料比较分散，在此总结一下。</p>
-
-<h2 id="require--exports">require 和 exports</h2>
-
-<p>个人感觉客户端js的最大缺点就是模块化难，原因有二：</p>
-
-<ol>
-  <li>JavaScript没有类的概念，虽然可以用一些方法来模拟类，但是远没有直接用<code>class</code>定义来得直接，针对这个缺点，可以用<strong>CoffeeScript</strong>来替代，但在下一篇文章会说说如何用JavaScript来模拟类。</li>
-  <li>JavaScript没有包含文件的功能，这就导致了必须自己来组织文件的顺序，从而在<code>index.html</code>里面按顺序把包含的<code>.js</code>文件一一列出。当然还有其他的方式，但是原理还是如此。使用工具的话推荐<a href="https://github.com/jrburke/requirejs">RequireJs</a>以及<a href="https://github.com/substack/node-browserify">browserify</a>，但使用起来依然不是那么方便。</li>
-</ol>
-
-<p>为此，在Node里面就方便很多了，其默认将各个文件看作是各个独立的<strong>Module</strong>，即在一个文件里面定义的变量，函数都不为其他文件所见，下面举个简单的例子。比如在文件<code>add.js</code>如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">file_name</span> <span class="o">=</span> <span class="s1">&#39;add.js&#39;</span><span class="p">;</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>那么在别的文件是不能访问<code>file_name</code>这个变量以及<code>add</code>这个函数的，如果要在别的文件里面使用它们，那么就必须先把它们<strong>暴露</strong>到这一个文件模块的外部，可以用如下的方式：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">file_name</span> <span class="o">=</span> <span class="s1">&#39;add.js&#39;</span><span class="p">;</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">file_name</span> <span class="o">=</span> <span class="nx">file_name</span><span class="p">;</span>
-</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>这样，我们就可以在别的文件使用这些变量了，在<code>use.js</code>里面使用方式如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// use.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add_file</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./add&#39;</span><span class="p">);</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add_file</span><span class="p">.</span><span class="nx">file_name</span><span class="p">);</span> <span class="c1">// output =&gt; add.js</span>
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add_file</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt; 7</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>由此可以看出，在<code>add.js</code>里面，我们把需要暴露的变量绑定到<code>exports</code>对象上面，然后真正返回出去的实际上是<code>exports</code>对象，在<code>use.js</code>里面调用<code>require</code>语句的时候，返回出来的<code>exports</code>对象被<code>add_file</code>变量接住了，所以就可以使用那些本来绑定在<code>exports</code>对象上面的变量了。</p>
-
-<h2 id="exports--moduleexports">exports 和 module.exports</h2>
-
-<p>既然<code>exports</code>是这样的一个对象，那么我们也可以这样进行绑定，比如<code>person.js</code>如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// person.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-</span><span class="line">    <span class="k">this</span><span class="p">.</span><span class="nx">age</span>  <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class="line">    <span class="nx">introduce</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class="line">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
-</span><span class="line">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="s1">&#39; years old.&#39;</span><span class="p">);</span>
-</span><span class="line">    <span class="p">}</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">;</span>
-</span><span class="line"><span class="c1">// exports = Person; DOES NOT WORK!</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>然后在<code>class.js</code>里面调用：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// class.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./person&#39;</span><span class="p">);</span>
-</span><span class="line">
-</span><span class="line"><span class="kd">var</span> <span class="kr">class</span> <span class="o">=</span> <span class="p">[</span>
-</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span>  <span class="p">,</span> <span class="mi">13</span><span class="p">),</span>
-</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Jim&#39;</span>  <span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
-</span><span class="line">    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Mary&#39;</span> <span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-</span><span class="line"><span class="p">];</span>
-</span><span class="line">
-</span><span class="line"><span class="kr">class</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="nx">person</span><span class="p">.</span><span class="nx">introduce</span><span class="p">();</span>
-</span><span class="line"><span class="p">});</span>
-</span><span class="line">
-</span><span class="line"><span class="cm">/**</span>
-</span><span class="line"><span class="cm"> * output:</span>
-</span><span class="line"><span class="cm"> * I am Tom. I am 13 years old.</span>
-</span><span class="line"><span class="cm"> * I am Jim. I am 12 years old.</span>
-</span><span class="line"><span class="cm"> * I am Han meimei. I am 13 years old.</span>
-</span><span class="line"><span class="cm"> */</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>可以看出，这个时候把<code>Person</code>作为整个模块的输出，那么<code>exports</code>和<code>module.exports</code>有什么区别呢？<strong>实际上，<code>exports</code>只是<code>module.exports</code>的一个helper，<code>exports</code>的作用在于收集需要暴露的变量，并将其包装为一个对象交给<code>module.exports</code>进行输出，所以<code>exports = Person</code>没有任何效果，<code>Person</code>没有绑定到<code>exports</code>。</strong>既然这样，写的时候就必须注意了，因为<code>exports</code>最后会交给<code>module.exports</code>进行输出，所以如果这两者同时存在，绑定到<code>exports</code>的变量会被<code>module.exports</code>的值所覆盖，即：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">;</span>
-</span><span class="line"><span class="nx">exports</span><span class="p">.</span><span class="nx">something</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">// `something` is blocked.</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h2 id="section">模块化组织</h2>
-
-<p>明白了上面所说的以后，进行模块化组织就很方便了，看看如下的文件结构：</p>
-
-<pre><code>└─┬─ lib
-  │   ├── add.js
-  │   ├── sub.js
-  │   └── math.js
-  └─ use.js
-</code></pre>
-
-<p>个文件如下：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-<span class="line-number">21</span>
-<span class="line-number">22</span>
-<span class="line-number">23</span>
-</pre></td><td class="code"><pre><code class="javascript"><span class="line"><span class="c1">// add.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
-</span><span class="line">
-</span><span class="line"><span class="c1">// sub.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">sub</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="line">    <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">add</span><span class="p">;</span>
-</span><span class="line">
-</span><span class="line"><span class="c1">// math.js</span>
-</span><span class="line"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class="line">    <span class="nx">add</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./add&#39;</span><span class="p">),</span>
-</span><span class="line">    <span class="nx">sub</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./sub&#39;</span><span class="p">),</span>
-</span><span class="line"><span class="p">}</span>
-</span><span class="line">
-</span><span class="line"><span class="c1">// use.js</span>
-</span><span class="line"><span class="kd">var</span> <span class="nx">math</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./lib/math&#39;</span><span class="p">);</span>
-</span><span class="line">
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt;  7</span>
-</span><span class="line"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">sub</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// output =&gt; -1 </span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
 ]]></content>
   </entry>
   
