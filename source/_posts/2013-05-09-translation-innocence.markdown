@@ -6,7 +6,7 @@ comments: true
 categories: [French, Translation]
 ---
 
-今天在百度百科回答问题，看到一条翻译歌曲的题目，本身已被几个月没碰法语的良心所责备，由于看到歌曲比较简单，于是联系了一把。这是Jonatan Cerrada的一首短歌《L'innocence》，由于有些地方希望用四字表述，所以可能有些词不达意了...
+今天在百度百科回答问题，看到一条翻译歌曲的题目，本身已被几个月没碰法语的良心所责备，由于看到歌曲比较简单，于是练习了一把。这是Jonatan Cerrada的一首短歌《L'innocence》，由于有些地方希望用四字表述，所以可能有些词不达意了...
 
     J'entre dans la lumière || 顾影随步，步入微光
     Indécis vers ce mystère || 徘徊不定，走向未知
