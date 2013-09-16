@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Book Review: Outliers - Null Space</title>
+  <meta name="author" content="zero">
+
+  
+  <meta name="description" content="这本书的英文版大概用了两周时间看完，不得不说，这本书带给我思想上的冲击是巨大的，但是我并不打算就书论书，而是希望借着读完这本书的感觉，来给忙碌工作一年的自己一个停下脚步思考的机会。 在去年加入YeungTech以来，我可以说没有停止过工作，任务总是难以想象地密集，这种密集的程度， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Aquietzero.github.com/blog/2013/09/16/book-review-outliers/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Null Space" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Aquietzero.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <header role="banner"><hgroup>
+  <h1><a href="/">Null Space</a></h1>
+  
+    <h2>with &infin; dimension and no inverse...</h2>
+  
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Book Review: Outliers</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-16T15:46:00+08:00" pubdate data-updated="true">Sep 16<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img class="left" src="/images/bookcovers/Outliers.jpg" /></p>
+
+<p>这本书的英文版大概用了两周时间看完，不得不说，这本书带给我思想上的冲击是巨大的，但是我并不打算就书论书，而是希望借着读完这本书的感觉，来给忙碌工作一年的自己一个停下脚步思考的机会。</p>
+
+<p>在去年加入YeungTech以来，我可以说没有停止过工作，任务总是难以想象地密集，这种密集的程度，无法用长时间的工作来完成。公司的发展方向发生了几次重大的变化，我感受到的是两次。每次发展方向的变更，可以说是推倒重来。虽然说在思想上更为清晰，在技术上更为熟练，但是从代码的角度来说，推倒重来这个说法一点也不过分，当然，为了使自己学更多的技术以及令工作更为有趣，我不断地变换实现功能的方式，技巧，以及所使用的工具。因为本人对重复劳动深恶痛疾，所以用这样的方式来工作，我本身也没有感到过多枯燥的地方。</p>
+
+<p>尽管一年下来，我遇到了，尝试了，以及克服了很多首次遇到的难题，但是在我自身感觉看来，我没有太大的进步。虽然从见识上，从技术上，我确实有了足见的增长，但是我个人却没有感觉到太大的喜悦，为何？估计这正是我平常没有太多笑容，也没有太多话语的主要原因之一。</p>
+
+<p>我细细地回想了一下，发现这一年下来，我的收获其实也不少：对python，javascript，css更为熟悉了；对之前看来看去都难以理解的backbone框架也算使用自如了，对mongodb，redis这种我以前一直想学却没有使用场景的技术有进一步的了解了；对手机web的开发也有一点心得了；对于页面布局自适配性也有一定经验了；对于系统架构对性能方面的影响也有一定认识了；了解团队工作的流程了；学会如何更有效地进行工作任务的安排了；还见识到了优越的工作环境，舒适的居住环境；当然，还背了不少英语，法语，日语的单词…当然，这样的列举只是非常粗略的，但是从这些我觉得我是成长了的地方看来，令我真正高兴的，却没有几点。</p>
+
+<p>不知道从何时开始，我的心就一直在理论与工程之间徘徊。从高中开始我就非常喜欢数学物理语言（英语除外），喜欢数学物理的原因很简单，因为我总有一个信念，那就是数学物理是最真切的知识，它们用最简单的语言，最直观的符号描述着世界很多现象背后复杂的运行原理；喜欢语言的原因也很简单，那并不是为了装酷，而是我对不同语言的语音，语调，构词，句法等等深感兴趣。但是自从高考失利阴差阳错地令我进入软件学院开始，我就渐渐与这些我喜欢的方向渐行渐远了。</p>
+
+<p>IT行业是一个朝阳行业，我对其的了解仅限于从进入大学的那一刻开始，虽然计算机背后的理论也是高深复杂，但是对于我们应用层次的程序员来说，很多时候都不需要去深究其背后的原理，以至于我们渐渐依赖于现有的工具，从而演化成一个工程型的人。但渐渐地，我发现我依旧在工程型与理论型之间徘徊不定，我并不希望自己是一个编程能力超强的人，但是我希望我是一个理论知识非常深厚的人。因为在我看来，工程技术是外在的技术，IT技术日新月异，只要有基础，从学习到使用自如相信不需要花很长的时间，但是理论知识则是一个人的内在修养，这需要日积月累的培养，而不是一朝一夕就能养成。当初我辞去UC的工作，原因正正是因为这个，因为我依然心系理论，希望从内功的层面提高自己。却没想到辞去UC工作不久，我就加入了YeungYech，开始这工作密度甚大的一年，再次与我的理论之路分道扬镳。</p>
+
+<p>对于这种两边徘徊的心态，在阅读了《Outliers》之后，我有了新的认识。里面提出的10000小时理论，令我深深感受到时间积淀的重要性。作者的观点其实从一定程度上否定了天才的存在，这对于我们此等凡人来说真的是一个莫大的心灵慰藉。要成功，必须得有足够的锻炼时间。纵观我自己的学习经历，无论是计算机，数学，物理，语言，相信离10000小时的锻炼还相距甚远。而如果我希望在这些方向上都有足够成长的话，相信我需要到中年的时候，才能够达成我的梦想。考虑到我现在每天的编程时间大概为8~10小时，看书时间大概为1~2小时，背单词时间时间大概为0.5小时，恐怕我真是在把大多数时间花在不是我最喜欢的方向的同时，天真地希望我能在我喜欢的方向上有足见的提高了。</p>
+
+<p>书中还提到了另外的一点，<strong>累积优势</strong>。其实我觉得这个概念已经可以很好地概括了其中还描述到的各种环境因数，运气因数，条件因数等等，因为这些各种的因素都给个人带来了短时间内看似微不足道的累积优势。这个概念令我多了一个习惯，那就是时不时回忆往事，看看过去有什么事情会使得我获得一些累积优势；也使得我在做下一步决定的时候，神经质地想想这个举动会给我之后带来什么翻天覆地的变化。当然，前者是可以考虑的，但是对于预测未来这种事情，我根本无能为力，故用“神经质”一词。</p>
+
+<p>这个累积优势的观点还有一个体现，那就是出生的时间问题。任何成功的人都必须出生在合适的时候，在社会变革的时候，你必须成长到一个你有足够的智慧来抓住机遇的年龄，其次就看你的实力了。这种观点在看书的时候我惊讶非常，但是细细想起却并不无道理。在物理数学飞速发展的时代，我们还没有出生，在互联网变革的时代，我们还没有成年，而在目前电子商务发展迅速的年代，我们已经算是有机会赶上这样的变革，但是可惜，我感觉我们这一代所缺少的正是技术，理论方面的积累，如果我们现在是三十岁，相信我和我那些优秀的同学们，一定可以在此领域做出翻天覆地的变化。除非电子商务在未来几年发展静止，但这很明显是不可能的。</p>
+
+<p>想到了凡此种种，我不禁有点失落，既为不能改变的出生时间感到一丝丝的可惜，也为自己的技术理论积累没有达到那个层次而有点愤愤不平。</p>
+
+<p>但虽如此，我并不消极。因为我还年轻，相信等我到了那个年龄，会有另外的机会给我抓住。目前要做的，正是抓紧时间去沉淀，去积累，为那个时刻的到来做好充足的准备。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">zero</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-16T15:46:00+08:00" pubdate data-updated="true">Sep 16<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/book-review/'>Book Review</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/05/09/translation-innocence/" title="Previous Post: Translation: L'innocence">&laquo; Translation: L'innocence</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/16/book-review-outliers/">Book Review: Outliers</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/09/translation-innocence/">Translation: L'innocence</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/31/summary-of-2012/">Summary of 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/29/fei-zheng-chang-mang-lu/">非正常忙碌</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/19/chao-yue-shi-kong/">Book Review: 超越时空</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Aquietzero">@Aquietzero</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Aquietzero',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    <li class='category'><a href='/blog/categories/book-review/'>Book Review (4)</a></li>
+<li class='category'><a href='/blog/categories/express/'>Express (1)</a></li>
+<li class='category'><a href='/blog/categories/footprint/'>Footprint (1)</a></li>
+<li class='category'><a href='/blog/categories/french/'>French (4)</a></li>
+<li class='category'><a href='/blog/categories/life/'>Life (4)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (6)</a></li>
+<li class='category'><a href='/blog/categories/module/'>Module (1)</a></li>
+<li class='category'><a href='/blog/categories/nodejs/'>NodeJs (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
+<li class='category'><a href='/blog/categories/probability/'>Probability (1)</a></li>
+<li class='category'><a href='/blog/categories/puzzle/'>Puzzle (1)</a></li>
+<li class='category'><a href='/blog/categories/system/'>System (1)</a></li>
+<li class='category'><a href='/blog/categories/translation/'>Translation (4)</a></li>
+<li class='category'><a href='/blog/categories/trivial/'>Trivial (3)</a></li>
+
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - zero -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'aquietzero';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Aquietzero.github.com/blog/2013/09/16/book-review-outliers/';
+        var disqus_url = 'http://Aquietzero.github.com/blog/2013/09/16/book-review-outliers/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
